@@ -1,0 +1,4 @@
+E:\dotNET\FileConfig\FileConfig_\bin\Debug\FileConfig_.dll
+E:\dotNET\FileConfig\FileConfig_\bin\Debug\FileConfig_.pdb
+E:\dotNET\FileConfig\FileConfig_\obj\Debug\FileConfig_.dll
+E:\dotNET\FileConfig\FileConfig_\obj\Debug\FileConfig_.pdb

@@ -1,0 +1,10 @@
+E:\dotNET\FileConfig\formTestFileConfig\bin\Debug\formTestFileConfig.exe.config
+E:\dotNET\FileConfig\formTestFileConfig\bin\Debug\formTestFileConfig.exe
+E:\dotNET\FileConfig\formTestFileConfig\bin\Debug\formTestFileConfig.pdb
+E:\dotNET\FileConfig\formTestFileConfig\bin\Debug\FileConfig_.dll
+E:\dotNET\FileConfig\formTestFileConfig\bin\Debug\FileConfig_.pdb
+E:\dotNET\FileConfig\formTestFileConfig\obj\Debug\formTestFileConfig.formTestFileConfig.resources
+E:\dotNET\FileConfig\formTestFileConfig\obj\Debug\formTestFileConfig.Properties.Resources.resources
+E:\dotNET\FileConfig\formTestFileConfig\obj\Debug\TestFileConfig.csproj.GenerateResource.Cache
+E:\dotNET\FileConfig\formTestFileConfig\obj\Debug\formTestFileConfig.exe
+E:\dotNET\FileConfig\formTestFileConfig\obj\Debug\formTestFileConfig.pdb

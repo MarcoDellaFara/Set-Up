@@ -1,0 +1,81 @@
+E:\dotNET\_LaserMarkCylF9000\connection\bin\Debug\App.config
+E:\dotNET\_LaserMarkCylF9000\connection\bin\Debug\connection.exe
+E:\dotNET\_LaserMarkCylF9000\connection\bin\Debug\connection.pdb
+E:\dotNET\_LaserMarkCylF9000\connection\bin\Debug\FileConfig_.dll
+E:\dotNET\_LaserMarkCylF9000\connection\bin\Debug\FileConfig_.pdb
+E:\dotNET\_LaserMarkCylF9000\connection\obj\Debug\Connection.csprojResolveAssemblyReference.cache
+E:\dotNET\_LaserMarkCylF9000\connection\obj\Debug\connection.frmConnection.resources
+E:\dotNET\_LaserMarkCylF9000\connection\obj\Debug\connection.Properties.Resources.resources
+E:\dotNET\_LaserMarkCylF9000\connection\obj\Debug\Connection.csproj.GenerateResource.Cache
+E:\dotNET\_LaserMarkCylF9000\connection\obj\Debug\connection.exe
+E:\dotNET\_LaserMarkCylF9000\connection\obj\Debug\connection.pdb
+C:\dotNET\_LaserMarkCylF9000\connection\bin\Debug\App.config
+C:\dotNET\_LaserMarkCylF9000\connection\bin\Debug\connection.exe
+C:\dotNET\_LaserMarkCylF9000\connection\bin\Debug\connection.pdb
+C:\dotNET\_LaserMarkCylF9000\connection\bin\Debug\FileConfig_.dll
+C:\dotNET\_LaserMarkCylF9000\connection\bin\Debug\FileConfig_.pdb
+C:\dotNET\_LaserMarkCylF9000\connection\bin\Debug\FileConfig_.dll.config
+C:\dotNET\_LaserMarkCylF9000\connection\obj\Debug\Connection.csprojAssemblyReference.cache
+C:\dotNET\_LaserMarkCylF9000\connection\obj\Debug\connection.frmConnection.resources
+C:\dotNET\_LaserMarkCylF9000\connection\obj\Debug\connection.Properties.Resources.resources
+C:\dotNET\_LaserMarkCylF9000\connection\obj\Debug\Connection.csproj.GenerateResource.cache
+C:\dotNET\_LaserMarkCylF9000\connection\obj\Debug\Connection.csproj.CoreCompileInputs.cache
+C:\dotNET\_LaserMarkCylF9000\connection\obj\Debug\Connection.csproj.CopyComplete
+C:\dotNET\_LaserMarkCylF9000\connection\obj\Debug\connection.exe
+C:\dotNET\_LaserMarkCylF9000\connection\obj\Debug\connection.pdb
+V:\Mdfdoc\PROGETTI\dotNET\_LaserMarkCylF9000\connection\bin\Debug\App.config
+V:\Mdfdoc\PROGETTI\dotNET\_LaserMarkCylF9000\connection\bin\Debug\connection.exe
+V:\Mdfdoc\PROGETTI\dotNET\_LaserMarkCylF9000\connection\bin\Debug\connection.pdb
+V:\Mdfdoc\PROGETTI\dotNET\_LaserMarkCylF9000\connection\bin\Debug\FileConfig_.dll
+V:\Mdfdoc\PROGETTI\dotNET\_LaserMarkCylF9000\connection\bin\Debug\FileConfig_.pdb
+V:\Mdfdoc\PROGETTI\dotNET\_LaserMarkCylF9000\connection\bin\Debug\FileConfig_.dll.config
+V:\Mdfdoc\PROGETTI\dotNET\_LaserMarkCylF9000\connection\obj\Debug\Connection.csprojAssemblyReference.cache
+V:\Mdfdoc\PROGETTI\dotNET\_LaserMarkCylF9000\connection\obj\Debug\connection.frmConnection.resources
+V:\Mdfdoc\PROGETTI\dotNET\_LaserMarkCylF9000\connection\obj\Debug\connection.Properties.Resources.resources
+V:\Mdfdoc\PROGETTI\dotNET\_LaserMarkCylF9000\connection\obj\Debug\Connection.csproj.GenerateResource.cache
+V:\Mdfdoc\PROGETTI\dotNET\_LaserMarkCylF9000\connection\obj\Debug\Connection.csproj.CoreCompileInputs.cache
+V:\Mdfdoc\PROGETTI\dotNET\_LaserMarkCylF9000\connection\obj\Debug\Connection.csproj.CopyComplete
+V:\Mdfdoc\PROGETTI\dotNET\_LaserMarkCylF9000\connection\obj\Debug\connection.exe
+V:\Mdfdoc\PROGETTI\dotNET\_LaserMarkCylF9000\connection\obj\Debug\connection.pdb
+V:\Mdfdoc\PROGETTI\dotNET\_LaserMarkCylF9000 - Copia\connection\bin\Debug\App.config
+V:\Mdfdoc\PROGETTI\dotNET\_LaserMarkCylF9000 - Copia\connection\bin\Debug\connection.exe
+V:\Mdfdoc\PROGETTI\dotNET\_LaserMarkCylF9000 - Copia\connection\bin\Debug\connection.pdb
+V:\Mdfdoc\PROGETTI\dotNET\_LaserMarkCylF9000 - Copia\connection\bin\Debug\FileConfig_.dll
+V:\Mdfdoc\PROGETTI\dotNET\_LaserMarkCylF9000 - Copia\connection\bin\Debug\FileConfig_.pdb
+V:\Mdfdoc\PROGETTI\dotNET\_LaserMarkCylF9000 - Copia\connection\bin\Debug\FileConfig_.dll.config
+V:\Mdfdoc\PROGETTI\dotNET\_LaserMarkCylF9000 - Copia\connection\obj\Debug\Connection.csprojAssemblyReference.cache
+V:\Mdfdoc\PROGETTI\dotNET\_LaserMarkCylF9000 - Copia\connection\obj\Debug\connection.frmConnection.resources
+V:\Mdfdoc\PROGETTI\dotNET\_LaserMarkCylF9000 - Copia\connection\obj\Debug\connection.Properties.Resources.resources
+V:\Mdfdoc\PROGETTI\dotNET\_LaserMarkCylF9000 - Copia\connection\obj\Debug\Connection.csproj.GenerateResource.cache
+V:\Mdfdoc\PROGETTI\dotNET\_LaserMarkCylF9000 - Copia\connection\obj\Debug\Connection.csproj.CoreCompileInputs.cache
+V:\Mdfdoc\PROGETTI\dotNET\_LaserMarkCylF9000 - Copia\connection\obj\Debug\Connection.csproj.CopyComplete
+V:\Mdfdoc\PROGETTI\dotNET\_LaserMarkCylF9000 - Copia\connection\obj\Debug\connection.exe
+V:\Mdfdoc\PROGETTI\dotNET\_LaserMarkCylF9000 - Copia\connection\obj\Debug\connection.pdb
+C:\dotNET\_LaserMarkCylF9000\trunk\connection\bin\Debug\App.config
+C:\dotNET\_LaserMarkCylF9000\trunk\connection\bin\Debug\connection.exe
+C:\dotNET\_LaserMarkCylF9000\trunk\connection\bin\Debug\connection.pdb
+C:\dotNET\_LaserMarkCylF9000\trunk\connection\bin\Debug\FileConfig_.dll
+C:\dotNET\_LaserMarkCylF9000\trunk\connection\bin\Debug\FileConfig_.pdb
+C:\dotNET\_LaserMarkCylF9000\trunk\connection\bin\Debug\FileConfig_.dll.config
+C:\dotNET\_LaserMarkCylF9000\trunk\connection\obj\Debug\Connection.csproj.AssemblyReference.cache
+C:\dotNET\_LaserMarkCylF9000\trunk\connection\obj\Debug\connection.frmConnection.resources
+C:\dotNET\_LaserMarkCylF9000\trunk\connection\obj\Debug\connection.Properties.Resources.resources
+C:\dotNET\_LaserMarkCylF9000\trunk\connection\obj\Debug\Connection.csproj.GenerateResource.cache
+C:\dotNET\_LaserMarkCylF9000\trunk\connection\obj\Debug\Connection.csproj.CoreCompileInputs.cache
+C:\dotNET\_LaserMarkCylF9000\trunk\connection\obj\Debug\Connection.csproj.CopyComplete
+C:\dotNET\_LaserMarkCylF9000\trunk\connection\obj\Debug\connection.exe
+C:\dotNET\_LaserMarkCylF9000\trunk\connection\obj\Debug\connection.pdb
+C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\SetUp\connection\bin\Debug\App.config
+C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\SetUp\connection\bin\Debug\connection.exe
+C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\SetUp\connection\bin\Debug\connection.pdb
+C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\SetUp\connection\bin\Debug\FileConfig_.dll
+C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\SetUp\connection\bin\Debug\FileConfig_.pdb
+C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\SetUp\connection\bin\Debug\FileConfig_.dll.config
+C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\SetUp\connection\obj\Debug\Connection.csproj.AssemblyReference.cache
+C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\SetUp\connection\obj\Debug\connection.frmConnection.resources
+C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\SetUp\connection\obj\Debug\connection.Properties.Resources.resources
+C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\SetUp\connection\obj\Debug\Connection.csproj.GenerateResource.cache
+C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\SetUp\connection\obj\Debug\Connection.csproj.CoreCompileInputs.cache
+C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\SetUp\connection\obj\Debug\Connection.csproj.CopyComplete
+C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\SetUp\connection\obj\Debug\connection.exe
+C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\SetUp\connection\obj\Debug\connection.pdb

@@ -1,0 +1,9 @@
+E:\PROVE\formTestFileConfig\formTestFileConfig\bin\Debug\formTestFileConfig.exe.config
+E:\PROVE\formTestFileConfig\formTestFileConfig\bin\Debug\formTestFileConfig.exe
+E:\PROVE\formTestFileConfig\formTestFileConfig\bin\Debug\formTestFileConfig.pdb
+E:\PROVE\formTestFileConfig\formTestFileConfig\obj\Debug\FILE.csprojResolveAssemblyReference.cache
+E:\PROVE\formTestFileConfig\formTestFileConfig\obj\Debug\formTestFileConfig.formTestFileConfig.resources
+E:\PROVE\formTestFileConfig\formTestFileConfig\obj\Debug\formTestFileConfig.Properties.Resources.resources
+E:\PROVE\formTestFileConfig\formTestFileConfig\obj\Debug\FILE.csproj.GenerateResource.Cache
+E:\PROVE\formTestFileConfig\formTestFileConfig\obj\Debug\formTestFileConfig.exe
+E:\PROVE\formTestFileConfig\formTestFileConfig\obj\Debug\formTestFileConfig.pdb
