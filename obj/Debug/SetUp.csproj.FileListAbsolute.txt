@@ -23,7 +23,6 @@ C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\SetUp\bin\Debug\FileConfig_.dll
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\SetUp\bin\Debug\connection.pdb
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\SetUp\bin\Debug\FileConfig_.pdb
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\SetUp\bin\Debug\FileConfig_.dll.config
-C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\SetUp\obj\Debug\SetUp.csprojAssemblyReference.cache
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\SetUp\obj\Debug\SetUp.Form1.resources
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\SetUp\obj\Debug\SetUp.Properties.Resources.resources
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\SetUp\obj\Debug\SetUp.csproj.GenerateResource.cache
@@ -31,3 +30,4 @@ C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\SetUp\obj\Debug\SetUp.csproj.CoreCompileI
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\SetUp\obj\Debug\SetUp.csproj.CopyComplete
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\SetUp\obj\Debug\SetUp.exe
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\SetUp\obj\Debug\SetUp.pdb
+C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\SetUp\obj\Debug\SetUp.csproj.AssemblyReference.cache
