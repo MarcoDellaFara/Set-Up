@@ -30,4 +30,4 @@ C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\SetUp\obj\Debug\SetUp.csproj.CoreCompileI
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\SetUp\obj\Debug\SetUp.csproj.CopyComplete
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\SetUp\obj\Debug\SetUp.exe
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\SetUp\obj\Debug\SetUp.pdb
-C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\SetUp\obj\Debug\SetUp.csproj.AssemblyReference.cache
+C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\SetUp\obj\Debug\SetUp.csprojAssemblyReference.cache
