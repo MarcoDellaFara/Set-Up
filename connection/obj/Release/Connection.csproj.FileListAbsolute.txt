@@ -72,3 +72,17 @@ C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\SetUp\connection\obj\Release\Connection.c
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\SetUp\connection\obj\Release\Connection.csproj.CopyComplete
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\SetUp\connection\obj\Release\connection.exe
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\SetUp\connection\obj\Release\connection.pdb
+C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\connection\bin\Release\App.config
+C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\connection\bin\Release\connection.exe
+C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\connection\bin\Release\connection.pdb
+C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\connection\bin\Release\FileConfig_.dll
+C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\connection\bin\Release\FileConfig_.pdb
+C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\connection\bin\Release\FileConfig_.dll.config
+C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\connection\obj\Release\Connection.csprojAssemblyReference.cache
+C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\connection\obj\Release\connection.frmConnection.resources
+C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\connection\obj\Release\connection.Properties.Resources.resources
+C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\connection\obj\Release\Connection.csproj.GenerateResource.cache
+C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\connection\obj\Release\Connection.csproj.CoreCompileInputs.cache
+C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\connection\obj\Release\Connection.csproj.CopyComplete
+C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\connection\obj\Release\connection.exe
+C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\connection\obj\Release\connection.pdb
