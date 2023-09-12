@@ -32,9 +32,9 @@ namespace SetUp
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tstlbl1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.btnConnection = new System.Windows.Forms.Button();
             this.btnRead = new System.Windows.Forms.Button();
             this.grbScore = new System.Windows.Forms.GroupBox();
+            this.chkCambioCampo = new System.Windows.Forms.CheckBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.optSet4 = new System.Windows.Forms.RadioButton();
             this.optSet3 = new System.Windows.Forms.RadioButton();
@@ -63,6 +63,7 @@ namespace SetUp
             this.txtGameA = new System.Windows.Forms.TextBox();
             this.rgbConfig = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.chkNameEnable = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNameB = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -88,6 +89,7 @@ namespace SetUp
             this.btnTimeSet = new System.Windows.Forms.Button();
             this.btnReadScore = new System.Windows.Forms.Button();
             this.btnWriteScore = new System.Windows.Forms.Button();
+            this.btnConnection = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
             this.grbScore.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -121,16 +123,6 @@ namespace SetUp
             this.tstlbl1.Size = new System.Drawing.Size(40, 17);
             this.tstlbl1.Text = "COM?";
             // 
-            // btnConnection
-            // 
-            this.btnConnection.Image = ((System.Drawing.Image)(resources.GetObject("btnConnection.Image")));
-            this.btnConnection.Location = new System.Drawing.Point(12, 471);
-            this.btnConnection.Name = "btnConnection";
-            this.btnConnection.Size = new System.Drawing.Size(52, 51);
-            this.btnConnection.TabIndex = 46;
-            this.btnConnection.UseVisualStyleBackColor = true;
-            this.btnConnection.Click += new System.EventHandler(this.btnConnection_Click);
-            // 
             // btnRead
             // 
             this.btnRead.Location = new System.Drawing.Point(388, 471);
@@ -143,6 +135,7 @@ namespace SetUp
             // 
             // grbScore
             // 
+            this.grbScore.Controls.Add(this.chkCambioCampo);
             this.grbScore.Controls.Add(this.groupBox7);
             this.grbScore.Controls.Add(this.groupBox6);
             this.grbScore.Location = new System.Drawing.Point(7, 8);
@@ -151,6 +144,17 @@ namespace SetUp
             this.grbScore.TabIndex = 48;
             this.grbScore.TabStop = false;
             this.grbScore.Text = "Score";
+            // 
+            // chkCambioCampo
+            // 
+            this.chkCambioCampo.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkCambioCampo.Image = global::SetUp.Properties.Resources._1494937143_reload;
+            this.chkCambioCampo.Location = new System.Drawing.Point(147, 405);
+            this.chkCambioCampo.Name = "chkCambioCampo";
+            this.chkCambioCampo.Size = new System.Drawing.Size(79, 46);
+            this.chkCambioCampo.TabIndex = 2;
+            this.chkCambioCampo.UseVisualStyleBackColor = true;
+            this.chkCambioCampo.CheckedChanged += new System.EventHandler(this.chkCambioCampo_CheckedChanged);
             // 
             // groupBox7
             // 
@@ -171,7 +175,7 @@ namespace SetUp
             this.groupBox7.Controls.Add(this.label10);
             this.groupBox7.Controls.Add(this.label11);
             this.groupBox7.Controls.Add(this.txtSetA_0);
-            this.groupBox7.Location = new System.Drawing.Point(11, 196);
+            this.groupBox7.Location = new System.Drawing.Point(11, 175);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(352, 224);
             this.groupBox7.TabIndex = 1;
@@ -442,6 +446,7 @@ namespace SetUp
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.chkNameEnable);
             this.groupBox5.Controls.Add(this.label2);
             this.groupBox5.Controls.Add(this.txtNameB);
             this.groupBox5.Controls.Add(this.label1);
@@ -452,6 +457,16 @@ namespace SetUp
             this.groupBox5.TabIndex = 21;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Setting Name";
+            // 
+            // chkNameEnable
+            // 
+            this.chkNameEnable.AutoSize = true;
+            this.chkNameEnable.Location = new System.Drawing.Point(10, 26);
+            this.chkNameEnable.Name = "chkNameEnable";
+            this.chkNameEnable.Size = new System.Drawing.Size(90, 17);
+            this.chkNameEnable.TabIndex = 16;
+            this.chkNameEnable.Text = "Name Enable";
+            this.chkNameEnable.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -475,7 +490,7 @@ namespace SetUp
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 21);
+            this.label1.Location = new System.Drawing.Point(26, 61);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 13);
             this.label1.TabIndex = 13;
@@ -484,7 +499,7 @@ namespace SetUp
             // txtNameA
             // 
             this.txtNameA.Font = new System.Drawing.Font("Arial Black", 25.25F, System.Drawing.FontStyle.Bold);
-            this.txtNameA.Location = new System.Drawing.Point(26, 37);
+            this.txtNameA.Location = new System.Drawing.Point(26, 77);
             this.txtNameA.Name = "txtNameA";
             this.txtNameA.Size = new System.Drawing.Size(89, 55);
             this.txtNameA.TabIndex = 12;
@@ -694,6 +709,7 @@ namespace SetUp
             0,
             0,
             0});
+            this.nudN_Set.ValueChanged += new System.EventHandler(this.nudN_Set_ValueChanged);
             // 
             // nudLimitTieBreak
             // 
@@ -719,6 +735,7 @@ namespace SetUp
             // 
             // btnWrite
             // 
+            this.btnWrite.Enabled = false;
             this.btnWrite.Location = new System.Drawing.Point(552, 471);
             this.btnWrite.Name = "btnWrite";
             this.btnWrite.Size = new System.Drawing.Size(148, 51);
@@ -749,6 +766,7 @@ namespace SetUp
             // 
             // btnWriteScore
             // 
+            this.btnWriteScore.Enabled = false;
             this.btnWriteScore.Location = new System.Drawing.Point(269, 471);
             this.btnWriteScore.Name = "btnWriteScore";
             this.btnWriteScore.Size = new System.Drawing.Size(65, 51);
@@ -756,6 +774,16 @@ namespace SetUp
             this.btnWriteScore.Text = "WRITE SCORE";
             this.btnWriteScore.UseVisualStyleBackColor = true;
             this.btnWriteScore.Click += new System.EventHandler(this.btnWriteScore_Click);
+            // 
+            // btnConnection
+            // 
+            this.btnConnection.Image = ((System.Drawing.Image)(resources.GetObject("btnConnection.Image")));
+            this.btnConnection.Location = new System.Drawing.Point(12, 471);
+            this.btnConnection.Name = "btnConnection";
+            this.btnConnection.Size = new System.Drawing.Size(52, 51);
+            this.btnConnection.TabIndex = 46;
+            this.btnConnection.UseVisualStyleBackColor = true;
+            this.btnConnection.Click += new System.EventHandler(this.btnConnection_Click);
             // 
             // Form1
             // 
@@ -861,6 +889,8 @@ namespace SetUp
         private System.Windows.Forms.Button btnWriteScore;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.NumericUpDown nudSetLimit;
+        private System.Windows.Forms.CheckBox chkNameEnable;
+        private System.Windows.Forms.CheckBox chkCambioCampo;
     }
 }
 

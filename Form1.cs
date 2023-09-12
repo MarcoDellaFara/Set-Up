@@ -98,6 +98,11 @@ frmConnection frmCON = new frmConnection();
             else
             { chkExtraTieBreak.Checked = false; }
 
+            if ((buf[0] & 8) == 8)
+            { chkNameEnable.Checked = true; }
+            else
+            { chkNameEnable.Checked = false; }
+
             trbBrightness.Value = buf[1] / 10;
 
             txtNameA.Text = chr[buf[2]] + chr[buf[3]] + chr[buf[4]];
@@ -108,6 +113,9 @@ frmConnection frmCON = new frmConnection();
 
             nudLimitTieBreak.Value = buf[10];
             nudLimitTieBreakExtra.Value = buf[11];
+
+            btnWrite.Enabled = true;
+
         }
 
         private void btnReadScore_Click(object sender, EventArgs e)
@@ -132,7 +140,7 @@ frmConnection frmCON = new frmConnection();
             txtSetB_3.Text = buf[10].ToString();
             txtSetB_4.Text = buf[11].ToString();
 
-            switch(buf[12])
+            switch (buf[12])
             {
                 case 0:
                     optSet0.Checked = true;
@@ -162,10 +170,21 @@ frmConnection frmCON = new frmConnection();
                 txtTurnoA.BackColor = Color.Yellow;
             }
 
+            if ((buf[13] & 4) == 4)
+            {
+                chkCambioCampo.Checked = true;
+            }
+            else
+            {
+                chkCambioCampo.Checked = false;
+            }
+
+            btnWriteScore.Enabled = true;
         }
 
         private void btnWriteScore_Click(object sender, EventArgs e)
         {
+
             buf[0] = (byte)Int16.Parse(txtGameA.Text);
             buf[1] = (byte)Int16.Parse(txtGameB.Text);
 
@@ -187,9 +206,22 @@ frmConnection frmCON = new frmConnection();
             else if (optSet3.Checked) { buf[12] = 3; }
             else if (optSet4.Checked) { buf[12] = 4; }
 
-            if(txtTurnoB.BackColor == Color.Yellow)
+            if (txtTurnoB.BackColor == Color.Yellow)
             {
-                buf[13] += 2;
+                buf[13] |= 0b00000010;
+            }
+            else
+            {
+                buf[13] &= 0b11111101;
+            }
+
+            if (chkCambioCampo.Checked)
+            {
+                buf[13] |= 0b00000100;
+            }
+            else
+            {
+                buf[13] &= 0b11111011;
             }
 
             frmCON.SerialPort.Write("ScoreW");
@@ -202,6 +234,7 @@ frmConnection frmCON = new frmConnection();
             if(chkKillerPoint.Checked) { buf[0] += 1; }
             if(chkEnableBuzzer.Checked) { buf[0] += 2; }
             if(chkExtraTieBreak.Checked) { buf[0] += 4; }
+            if(chkNameEnable.Checked) { buf[0] += 8; }
 
             buf[1] = (byte)(trbBrightness.Value * 10);
 
@@ -305,6 +338,19 @@ frmConnection frmCON = new frmConnection();
         {
             txtTurnoA.BackColor = Color.White;
             txtTurnoB.BackColor = Color.Yellow;
+        }
+
+        private void nudN_Set_ValueChanged(object sender, EventArgs e)
+        {
+            if(nudN_Set.Value > 3)
+            {
+                chkNameEnable.Checked = false;
+            }
+        }
+
+        private void chkCambioCampo_CheckedChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
