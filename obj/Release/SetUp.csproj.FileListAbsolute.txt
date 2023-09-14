@@ -49,3 +49,8 @@ C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\obj\Release\SetUp.csproj.CoreCompi
 C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\obj\Release\SetUp.csproj.CopyComplete
 C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\obj\Release\SetUp.exe
 C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\obj\Release\SetUp.pdb
+C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\bin\Release\SetUp.exe.manifest
+C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\bin\Release\SetUp.application
+C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\obj\Release\SetUp.exe.manifest
+C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\obj\Release\SetUp.application
+C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\obj\Release\SetUp.TrustInfo.xml

@@ -65,3 +65,8 @@ C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\obj\Debug\SetUp.csproj.CoreCompile
 C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\obj\Debug\SetUp.csproj.CopyComplete
 C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\obj\Debug\SetUp.exe
 C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\obj\Debug\SetUp.pdb
+C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\bin\Debug\SetUp.exe.manifest
+C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\bin\Debug\SetUp.application
+C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\obj\Debug\SetUp.TrustInfo.xml
+C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\obj\Debug\SetUp.exe.manifest
+C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\obj\Debug\SetUp.application
