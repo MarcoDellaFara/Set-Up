@@ -240,6 +240,7 @@
             this.groupBox1.Controls.Add(this.txtStringSend);
             this.groupBox1.Controls.Add(this.btnSEND);
             this.groupBox1.Controls.Add(this.cmbBaseComand);
+            this.groupBox1.Enabled = false;
             this.groupBox1.Location = new System.Drawing.Point(12, 137);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(682, 226);

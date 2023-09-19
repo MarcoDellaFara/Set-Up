@@ -799,6 +799,7 @@ namespace SetUp
             this.Controls.Add(this.btnRead);
             this.Controls.Add(this.btnConnection);
             this.Controls.Add(this.statusStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "SetUp Table Ver.";
             this.Load += new System.EventHandler(this.Form1_Load);
