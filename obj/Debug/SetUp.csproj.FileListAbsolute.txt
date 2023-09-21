@@ -39,7 +39,6 @@ C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\bin\Debug\connection.exe
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\bin\Debug\FileConfig_.dll
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\bin\Debug\connection.pdb
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\bin\Debug\FileConfig_.pdb
-C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\bin\Debug\FileConfig_.dll.config
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\obj\Debug\SetUp.csprojAssemblyReference.cache
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\obj\Debug\SetUp.Form1.resources
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\obj\Debug\SetUp.Properties.Resources.resources

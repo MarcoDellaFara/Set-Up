@@ -93,12 +93,10 @@ C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\SetUp\connection\obj\Debug\Connection.csp
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\SetUp\connection\obj\Debug\Connection.csproj.CopyComplete
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\SetUp\connection\obj\Debug\connection.exe
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\SetUp\connection\obj\Debug\connection.pdb
-C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\connection\bin\Debug\App.config
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\connection\bin\Debug\connection.exe
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\connection\bin\Debug\connection.pdb
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\connection\bin\Debug\FileConfig_.dll
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\connection\bin\Debug\FileConfig_.pdb
-C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\connection\bin\Debug\FileConfig_.dll.config
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\connection\obj\Debug\Connection.csprojAssemblyReference.cache
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\connection\obj\Debug\connection.frmConnection.resources
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\connection\obj\Debug\connection.Properties.Resources.resources

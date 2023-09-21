@@ -9,6 +9,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using connection;
+using System.IO;
 
 namespace SetUp
 {
@@ -69,7 +70,19 @@ frmConnection frmCON = new frmConnection();
                     if (dres == DialogResult.Yes)
                     {
                         string url = "https://github.com/MarcoDellaFara/Set-Up/releases/download/" + "v" + NewVer + "/Install-SetUp.msi";
-                        string dest = System.IO.Directory.GetCurrentDirectory() + "\\Install-SetUp.msi";
+
+                        //string dest = System.IO.Directory.GetCurrentDirectory() + "\\Install-SetUp.msi";
+                        string dest = @"C:\Temp" + @"\Install-SetUp.msi";
+                        //string dest = @"C:\Windows\Temp";
+
+                        //string dest = Environment.SpecialFolder.UserProfile + @"\Downloads";
+
+                        //string dest = @GetDownloadFolderPath();
+
+                        if (!Directory.Exists(@"C:\Temp"))
+                        {
+                            Directory.CreateDirectory(@"C:\Temp");
+                        }
 
                         System.Net.WebClient myWeb = new System.Net.WebClient();
                         myWeb.DownloadFileCompleted += Web_DownloadFileCompleted;
@@ -79,10 +92,44 @@ frmConnection frmCON = new frmConnection();
             }
         }
 
+        //private static string GetHomePath()
+        //{
+        //    // Not in .NET 2.0
+        //    // System.Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+        //    if (System.Environment.OSVersion.Platform == System.PlatformID.Unix)
+        //        return System.Environment.GetEnvironmentVariable("HOME");
+
+        //    return System.Environment.ExpandEnvironmentVariables("%HOMEDRIVE%%HOMEPATH%");
+        //}
+
+
+        //private static string GetDownloadFolderPath()
+        //{
+        //    if (System.Environment.OSVersion.Platform == System.PlatformID.Unix)
+        //    {
+        //        string pathDownload = System.IO.Path.Combine(GetHomePath(), "Downloads");
+        //        return pathDownload;
+        //    }
+
+        //    return System.Convert.ToString(
+        //        Microsoft.Win32.Registry.GetValue(
+        //             @"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders"
+        //            , "{374DE290-123F-4565-9164-39C4925E467B}"
+        //            , String.Empty
+        //        )
+        //    );
+        //}
+
         private void Web_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
         {
-            string path = System.IO.Directory.GetCurrentDirectory() + "\\Install-SetUp.msi";
-            System.Diagnostics.Process.Start(System.IO.Directory.GetCurrentDirectory() + "\\Install-SetUp.msi");
+            //string path = System.IO.Directory.GetCurrentDirectory() + "\\Install-SetUp.msi";
+            string path = @"C:\Temp" + @"\Install-SetUp.msi";
+            //string path = @"C:\Windows\Temp";
+            //String path = Environment.SpecialFolder.UserProfile + @"\Downloads";
+
+            //string path = GetDownloadFolderPath() + "\\Install -SetUp.msi";
+
+            System.Diagnostics.Process.Start(path);
             System.Threading.Thread.Sleep(1000);
             this.Close();
         }
