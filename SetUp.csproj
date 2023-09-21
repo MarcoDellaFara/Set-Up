@@ -88,16 +88,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="frmLastNews.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmLastNews.Designer.cs">
+      <DependentUpon>frmLastNews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="frmLastNews.resx">
+      <DependentUpon>frmLastNews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -128,8 +137,13 @@
       <Project>{89a3110f-9bef-44bd-ae5d-2abbd7d7a676}</Project>
       <Name>Connection</Name>
     </ProjectReference>
+    <ProjectReference Include="FileConfig\FileConfig\FileConfig.csproj">
+      <Project>{911dec0e-b0fe-4cb1-905c-79edaf9b6fdd}</Project>
+      <Name>FileConfig</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\LastNews.png" />
     <Content Include="TennisScore.ico" />
     <Content Include="Tennis_Ball.ico" />
     <None Include="Resources\transfers.png" />
