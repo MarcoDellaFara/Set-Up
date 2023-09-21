@@ -803,6 +803,7 @@ namespace SetUp
             this.Name = "Form1";
             this.Text = "SetUp Table Ver.";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Shown += new System.EventHandler(this.Form1_Shown);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.grbScore.ResumeLayout(false);

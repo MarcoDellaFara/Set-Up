@@ -34,9 +34,9 @@ namespace SetUp
         //    uint16_t CRC;
         //};
 
-
-
 frmConnection frmCON = new frmConnection();
+
+        string LocalVer;
 
         public Form1()
         {
@@ -45,12 +45,63 @@ frmConnection frmCON = new frmConnection();
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            string Ver = Application.ProductVersion.Substring(0, 5);
+            LocalVer = Application.ProductVersion.Substring(0, 5);
             string VerCompile = Application.ProductVersion.Substring(6);
 
-            this.Text = this.Text + Ver + " (" + VerCompile + ")";
+            this.Text = this.Text + LocalVer + " (" + VerCompile + ")";
 
             Resfresh_StatusCom();
+        }
+
+        private void Form1_Shown(object sender, EventArgs e)
+        {
+            string NewVer = get_NewVersion();
+
+            if (NewVer != "")
+            {
+                if (int.Parse(NewVer.Replace(".", "")) > int.Parse(LocalVer.Replace(".", "")))
+                {
+                    string msg =    "E' disponibile la nuova versione " + NewVer + " di SetUp. \r\n \r\n " + 
+                                    "Vuoi Scaricare ed aggiornare il programma?";
+
+                    DialogResult dres = MessageBox.Show(msg,"Nuovo Aggiornamento",MessageBoxButtons.YesNo,MessageBoxIcon.Information);
+
+                    if (dres == DialogResult.Yes)
+                    {
+                        string url = "https://github.com/MarcoDellaFara/Set-Up/releases/download/" + "v" + NewVer + "/Install-SetUp.msi";
+                        string dest = System.IO.Directory.GetCurrentDirectory() + "\\Install-SetUp.msi";
+
+                        System.Net.WebClient myWeb = new System.Net.WebClient();
+                        myWeb.DownloadFileCompleted += Web_DownloadFileCompleted;
+                        myWeb.DownloadFileAsync(new Uri(url), dest);
+                    }
+                }
+            }
+        }
+
+        private void Web_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
+        {
+            string path = System.IO.Directory.GetCurrentDirectory() + "\\Install-SetUp.msi";
+            System.Diagnostics.Process.Start(System.IO.Directory.GetCurrentDirectory() + "\\Install-SetUp.msi");
+            System.Threading.Thread.Sleep(1000);
+            this.Close();
+        }
+
+        private string get_NewVersion()
+        {
+            System.Xml.XmlDocument doc = new System.Xml.XmlDocument();
+            doc.Load("https://github.com/MarcoDellaFara/Set-Up/releases.atom");
+            System.Xml.XmlNodeList nodes = doc.GetElementsByTagName("id");
+            if(nodes.Count < 2)
+            {
+                return "";
+            }
+            else
+            {
+                string[] str = nodes[1].InnerText.Split('/');
+                string result = str[2].Substring(1);
+                return result;
+            }
         }
 
         private void Resfresh_StatusCom()
