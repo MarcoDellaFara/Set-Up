@@ -17,9 +17,6 @@ namespace SetUp
     public partial class Form1 : Form
     {
 
-
-        //struct marco {
-
         //unsigned Killer_Point:1;
         //    unsigned b1:1;
         //    unsigned b2:1;

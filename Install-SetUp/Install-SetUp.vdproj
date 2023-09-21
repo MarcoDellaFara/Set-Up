@@ -34,19 +34,19 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_80372FC98DA2E0926FC9D0AC1D10398B"
+        "MsmKey" = "8:_9C65B14B3B8E46494729342FF5A5B52E"
+        "OwnerKey" = "8:_C9EE9C8C1CF41635FC361A50888B3E6D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_9C65B14B3B8E46494729342FF5A5B52E"
         "OwnerKey" = "8:_351902C0C1DF45D8B8288041AF56609C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_8547AB3E009DE839975513DFEBE0F79E"
-        "OwnerKey" = "8:_80372FC98DA2E0926FC9D0AC1D10398B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_8547AB3E009DE839975513DFEBE0F79E"
+        "MsmKey" = "8:_C9EE9C8C1CF41635FC361A50888B3E6D"
         "OwnerKey" = "8:_351902C0C1DF45D8B8288041AF56609C"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -65,13 +65,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_80372FC98DA2E0926FC9D0AC1D10398B"
+        "OwnerKey" = "8:_C9EE9C8C1CF41635FC361A50888B3E6D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_8547AB3E009DE839975513DFEBE0F79E"
+        "OwnerKey" = "8:_9C65B14B3B8E46494729342FF5A5B52E"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -215,20 +215,20 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_80372FC98DA2E0926FC9D0AC1D10398B"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9C65B14B3B8E46494729342FF5A5B52E"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Connection, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:FileConfig_, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_80372FC98DA2E0926FC9D0AC1D10398B"
+                    "_9C65B14B3B8E46494729342FF5A5B52E"
                     {
-                    "Name" = "8:Connection.exe"
+                    "Name" = "8:FileConfig_.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:Connection.exe"
+            "SourcePath" = "8:FileConfig_.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_2DED68D88AFA48119D5B32F212A520F0"
@@ -246,20 +246,20 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_8547AB3E009DE839975513DFEBE0F79E"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C9EE9C8C1CF41635FC361A50888B3E6D"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:FileConfig_, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:Connection, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_8547AB3E009DE839975513DFEBE0F79E"
+                    "_C9EE9C8C1CF41635FC361A50888B3E6D"
                     {
-                    "Name" = "8:FileConfig_.dll"
+                    "Name" = "8:Connection.exe"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:FileConfig_.dll"
+            "SourcePath" = "8:Connection.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_2DED68D88AFA48119D5B32F212A520F0"
@@ -364,15 +364,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SetUp"
-        "ProductCode" = "8:{969A9DC5-074F-4F28-822E-568610DB8F7B}"
-        "PackageCode" = "8:{0A762C10-A1EE-4D37-AFCA-E40B8FE3891B}"
+        "ProductCode" = "8:{06B9E5CB-5145-4E38-98A2-798D1FA31D16}"
+        "PackageCode" = "8:{3B8BAF83-09B0-49F8-85A0-8A05E58FD77E}"
         "UpgradeCode" = "8:{EA5371A2-21E2-4281-9A9F-9EC087D2B576}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
-        "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.5"
+        "InstallAllUsers" = "11:TRUE"
+        "ProductVersion" = "8:1.0.6"
         "Manufacturer" = "8:MDF"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -914,7 +914,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_351902C0C1DF45D8B8288041AF56609C"
             {
-            "SourcePath" = "8:..\\obj\\Debug\\SetUp.exe"
+            "SourcePath" = "8:..\\obj\\Release\\SetUp.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_2DED68D88AFA48119D5B32F212A520F0"

@@ -130,6 +130,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="TennisScore.ico" />
     <Content Include="Tennis_Ball.ico" />
     <None Include="Resources\transfers.png" />
     <None Include="Resources\transfers1.png" />
