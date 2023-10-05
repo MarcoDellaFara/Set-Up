@@ -24,7 +24,6 @@ C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\bin\Release\FileConfig_.dll
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\bin\Release\Connection.pdb
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\bin\Release\FileConfig_.pdb
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\obj\Release\SetUp.csprojAssemblyReference.cache
-C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\obj\Release\SetUp.Form1.resources
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\obj\Release\SetUp.Properties.Resources.resources
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\obj\Release\SetUp.csproj.GenerateResource.cache
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\obj\Release\SetUp.csproj.CoreCompileInputs.cache
@@ -48,3 +47,5 @@ C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\obj\Release\SetUp.csproj.CoreCompi
 C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\obj\Release\SetUp.csproj.CopyComplete
 C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\obj\Release\SetUp.exe
 C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\obj\Release\SetUp.pdb
+C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\obj\Release\SetUp.frmLastNews.resources
+C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\obj\Release\SetUp.frmMain.resources

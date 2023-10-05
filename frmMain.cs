@@ -53,9 +53,30 @@ frmConnection frmCON = new frmConnection();
 
         private void Form1_Shown(object sender, EventArgs e)
         {
+            FileConfig cfg = new FileConfig();
+
             string NewVer = get_NewVersion();
 
-            if (NewVer != "")
+            if (NewVer == "@NoConnect")
+            {
+                string str_Connect = cfg.Read("appSettings", "View_MessageNoConnect");
+
+                if (str_Connect == "True")
+                {
+                    string msg = "Impossibile rilevare aggiornamenti ON-LINE!\r\n" +
+                    "Verifica la connessione Internet!\r\n " +
+                    "\r\n " +
+                    "Vuoi disabilitare questo messaggio all'avvio del Programma?";
+
+                    DialogResult res = MessageBox.Show(msg, "ATTENZIONE", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+
+                    if (res == DialogResult.Yes)
+                    {
+                        cfg.Write("appSettings", "View_MessageNoConnect", "False");
+                    }
+                }
+            }
+            else if (NewVer != "")
             {
                 if (int.Parse(NewVer.Replace(".", "")) > int.Parse(LocalVer.Replace(".", "")))
                 {
@@ -88,9 +109,7 @@ frmConnection frmCON = new frmConnection();
                 }
                 else
                 {
-                    FileConfig fcg = new FileConfig();
-
-                    if (fcg.Read("appSettings", "View_LastNews") == "True")
+                    if (cfg.Read("appSettings", "View_LastNews") == "True")
                     {
                         frmLastNews frm = new frmLastNews();
                         frm.lblVer.Text = LocalVer;
@@ -100,7 +119,7 @@ frmConnection frmCON = new frmConnection();
                         {
                             Application.DoEvents();
                         }
-                        fcg.Write("appSettings", "View_LastNews", frm.chkEnableViewLastNews.Checked.ToString()); ;
+                        cfg.Write("appSettings", "View_LastNews", frm.chkEnableViewLastNews.Checked.ToString());
                     }
                 }
             }
@@ -150,18 +169,25 @@ frmConnection frmCON = new frmConnection();
 
         private string get_NewVersion()
         {
-            System.Xml.XmlDocument doc = new System.Xml.XmlDocument();
-            doc.Load("https://github.com/MarcoDellaFara/Set-Up/releases.atom");
-            System.Xml.XmlNodeList nodes = doc.GetElementsByTagName("id");
-            if(nodes.Count < 2)
+            try
             {
-                return "";
+                System.Xml.XmlDocument doc = new System.Xml.XmlDocument();
+                doc.Load("https://github.com/MarcoDellaFara/Set-Up/releases.atom");
+                System.Xml.XmlNodeList nodes = doc.GetElementsByTagName("id");
+                if (nodes.Count < 2)
+                {
+                    return "";
+                }
+                else
+                {
+                    string[] str = nodes[1].InnerText.Split('/');
+                    string result = str[2].Substring(1);
+                    return result;
+                }
             }
-            else
+            catch
             {
-                string[] str = nodes[1].InnerText.Split('/');
-                string result = str[2].Substring(1);
-                return result;
+                return "@NoConnect";
             }
         }
 
