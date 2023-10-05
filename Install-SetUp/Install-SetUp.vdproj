@@ -182,6 +182,11 @@
             "AssemblyAsmDisplayName" = "8:FileConfig_, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_060047821EBA7779EE18A83CB2CF740C"
+                    {
+                    "Name" = "8:FileConfig_.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:FileConfig_.dll"
             "TargetName" = "8:"
@@ -228,7 +233,7 @@
             "Tag" = "8:"
             "Folder" = "8:_2DED68D88AFA48119D5B32F212A520F0"
             "Condition" = "8:"
-            "Transitive" = "11:FALSE"
+            "Transitive" = "11:TRUE"
             "Vital" = "11:TRUE"
             "ReadOnly" = "11:FALSE"
             "Hidden" = "11:FALSE"
@@ -248,6 +253,11 @@
             "AssemblyAsmDisplayName" = "8:Connection, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_C9EE9C8C1CF41635FC361A50888B3E6D"
+                    {
+                    "Name" = "8:Connection.exe"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:Connection.exe"
             "TargetName" = "8:"
