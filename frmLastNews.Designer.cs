@@ -51,8 +51,8 @@ namespace SetUp
             this.richTextBox1.ReadOnly = true;
             this.richTextBox1.Size = new System.Drawing.Size(604, 420);
             this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "1.1.1\nGestione della mancata connettività ad Internet.\n\n1.1.0\nAggiunto la Verific" +
-    "a automatica degli aggiornamenti online all\'avvio del programma.";
+            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // btmOK
             // 

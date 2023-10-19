@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,10 +14,8 @@ using System.IO;
 
 namespace SetUp
 {
-
     public partial class frmMain : Form
     {
-
         //unsigned Killer_Point:1;
         //    unsigned b1:1;
         //    unsigned b2:1;
@@ -35,7 +34,6 @@ namespace SetUp
 frmConnection frmCON = new frmConnection();
 
         string LocalVer;
-
         public frmMain()
         {
             InitializeComponent();
@@ -216,48 +214,55 @@ frmConnection frmCON = new frmConnection();
 
         private void btnRead_Click(object sender, EventArgs e)
         {
+            //clearBuffer();
+
             frmCON.SerialPort.Write("SetUpR");
             Thread.Sleep(1000);
             RxCount = frmCON.SerialPort.BytesToRead;
             frmCON.SerialPort.Read(buf, 0, RxCount);
 
-            if((buf[0] & 1) == 1)
-            {chkKillerPoint.Checked = true;}
-            else
-            {chkKillerPoint.Checked = false;}
+            if (RxCount == 14)
+            {
 
-            if ((buf[0] & 2) == 2)
-            { chkEnableBuzzer.Checked = true; }
-            else
-            { chkEnableBuzzer.Checked = false; }
+                if ((buf[0] & 1) == 1)
+                { chkKillerPoint.Checked = true; }
+                else
+                { chkKillerPoint.Checked = false; }
 
-            if ((buf[0] & 4) == 4)
-            { chkExtraTieBreak.Checked = true; }
-            else
-            { chkExtraTieBreak.Checked = false; }
+                if ((buf[0] & 2) == 2)
+                { chkEnableBuzzer.Checked = true; }
+                else
+                { chkEnableBuzzer.Checked = false; }
 
-            if ((buf[0] & 8) == 8)
-            { chkNameEnable.Checked = true; }
-            else
-            { chkNameEnable.Checked = false; }
+                if ((buf[0] & 4) == 4)
+                { chkExtraTieBreak.Checked = true; }
+                else
+                { chkExtraTieBreak.Checked = false; }
 
-            trbBrightness.Value = buf[1] / 10;
+                if ((buf[0] & 8) == 8)
+                { chkNameEnable.Checked = true; }
+                else
+                { chkNameEnable.Checked = false; }
 
-            txtNameA.Text = chr[buf[2]] + chr[buf[3]] + chr[buf[4]];
-            txtNameB.Text = chr[buf[5]] + chr[buf[6]] + chr[buf[7]];
+                trbBrightness.Value = buf[1] / 10;
 
-            nudN_Set.Value = buf[8];
-            nudSetLimit.Value = buf[9];
+                txtNameA.Text = chr[buf[2]] + chr[buf[3]] + chr[buf[4]];
+                txtNameB.Text = chr[buf[5]] + chr[buf[6]] + chr[buf[7]];
 
-            nudLimitTieBreak.Value = buf[10];
-            nudLimitTieBreakExtra.Value = buf[11];
+                nudN_Set.Value = buf[8];
+                nudSetLimit.Value = buf[9];
 
-            btnWrite.Enabled = true;
+                nudLimitTieBreak.Value = buf[10];
+                nudLimitTieBreakExtra.Value = buf[11];
 
+                btnWrite.Enabled = true;
+            }
         }
 
         private void btnReadScore_Click(object sender, EventArgs e)
         {
+            //clearBuffer();
+
             frmCON.SerialPort.Write("ScoreR");
             Thread.Sleep(1000);
             RxCount = frmCON.SerialPort.BytesToRead;
@@ -322,6 +327,7 @@ frmConnection frmCON = new frmConnection();
 
         private void btnWriteScore_Click(object sender, EventArgs e)
         {
+            //clearBuffer();
 
             buf[0] = (byte)Int16.Parse(txtGameA.Text);
             buf[1] = (byte)Int16.Parse(txtGameB.Text);
@@ -368,6 +374,8 @@ frmConnection frmCON = new frmConnection();
 
         private void btnWrite_Click(object sender, EventArgs e)
         {
+            clearBuffer();
+
             buf[0] = 0;
             if(chkKillerPoint.Checked) { buf[0] += 1; }
             if(chkEnableBuzzer.Checked) { buf[0] += 2; }
@@ -418,6 +426,7 @@ frmConnection frmCON = new frmConnection();
 
         private void btnTimeSet_Click(object sender, EventArgs e)
         {
+            clearBuffer();
 
             //.year = 00,
             // .month = Ds1302::MONTH_JAN,
@@ -490,5 +499,134 @@ frmConnection frmCON = new frmConnection();
         {
             
         }
+
+        private void clearBuffer()
+        {
+            frmCON.SerialPort.DiscardInBuffer();
+            frmCON.SerialPort.DiscardOutBuffer();
+        }
+
+        private void btnWriteLogo_Click(object sender, EventArgs e)
+        {
+            string filepath = "";
+            //byte[] pack = { 255, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+            byte[] pack = new byte[768 * 2];
+            byte[] s_pack = new byte[32];
+
+            using (OpenFileDialog ofile = new OpenFileDialog())
+            {
+                ofile.InitialDirectory = Application.ExecutablePath.ToString();
+                ofile.Filter = "logo file (*.logo)|*.logo|All File (*.*)|*.*";
+                ofile.FilterIndex = 1;
+                ofile.RestoreDirectory = true;
+
+                if (ofile.ShowDialog() == DialogResult.OK)
+                {
+                    filepath = ofile.FileName;
+                }
+                else
+                {
+                    return;
+                }
+            }
+
+            try
+            {
+                //byte[] by = new byte[768 * 2];
+                pack = File.ReadAllBytes(filepath);
+
+                //using (StreamReader sr = new StreamReader(filepath))
+                //{
+                //    string str = sr.ReadLine();
+
+                //    pack = str.To;
+                //}
+
+                clearBuffer();
+
+                frmCON.SerialPort.Write("Logo_W");
+
+                Thread.Sleep(1000);
+
+
+
+                for (int i = 0; i < 48; i++)
+                {
+                    //Thread.Sleep(10);
+
+                    Array.Copy(pack,i * 32, s_pack ,0, 32);
+
+                    frmCON.SerialPort.Write(s_pack, 0, 32);
+
+
+                    //RxCount = 0;
+
+                    //while (RxCount == 0)
+                    //{
+                    //    Thread.Sleep(100);
+                    //    RxCount = frmCON.SerialPort.BytesToRead;
+                    //    Application.DoEvents();
+                    //}
+
+                    Thread.Sleep(50);
+
+                    //RxCount = frmCON.SerialPort.BytesToRead;
+                    //frmCON.SerialPort.Read(pack, 0, RxCount);
+
+                }
+
+            }
+            catch
+            {
+                MessageBox.Show("Impossibile aprire il file.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btn_UpdateDevice_Click(object sender, EventArgs e)
+        {
+            // For the example
+            //string ex1 = Application.StartupPath;
+            //string ex2 = "\\Update";
+
+            // Use ProcessStartInfo class
+            //ProcessStartInfo startInfo = new ProcessStartInfo();
+
+            try
+            {
+                frmCON.ClosePort();
+
+                Process process = new Process();
+                
+                process.StartInfo.CreateNoWindow = true;
+                process.StartInfo.UseShellExecute = false;
+                process.StartInfo.RedirectStandardOutput = true;
+                process.StartInfo.FileName = Application.StartupPath + "\\esptool.exe";
+                process.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
+                process.StartInfo.Arguments = "-p COM3 -b 912600 write_flash 0x10000 firmware.bin";
+                process.Start();
+
+                StreamReader reader = process.StandardOutput;
+                string output = reader.ReadToEnd();
+
+                Console.WriteLine(output);
+
+                process.WaitForExit();
+
+                Boolean marco = output.Contains("Hash of data verified.");
+
+                if (!marco) { throw new Exception();}
+
+                frmCON.OpenPort();
+            }
+            catch(Exception)
+            {
+                MessageBox.Show( "Impossibile aprire il file.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                MessageBox.Show("Aggionramento del dispositivo Eseguito con Successo", "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
+    
 }

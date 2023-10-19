@@ -46,8 +46,20 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_B9291DE499DA4343A608BA1BB444A64F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_C9EE9C8C1CF41635FC361A50888B3E6D"
         "OwnerKey" = "8:_351902C0C1DF45D8B8288041AF56609C"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D8DA7D2BF8D84AF6B2FA8C21F94FF4C5"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -246,6 +258,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B9291DE499DA4343A608BA1BB444A64F"
+            {
+            "SourcePath" = "8:..\\bin\\Release\\firmware.bin"
+            "TargetName" = "8:firmware.bin"
+            "Tag" = "8:"
+            "Folder" = "8:_2DED68D88AFA48119D5B32F212A520F0"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C9EE9C8C1CF41635FC361A50888B3E6D"
             {
             "AssemblyRegister" = "3:1"
@@ -275,6 +307,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D8DA7D2BF8D84AF6B2FA8C21F94FF4C5"
+            {
+            "SourcePath" = "8:..\\bin\\Release\\esptool.exe"
+            "TargetName" = "8:esptool.exe"
+            "Tag" = "8:"
+            "Folder" = "8:_2DED68D88AFA48119D5B32F212A520F0"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E64448CB869C846ECF7A3A557F9B6C28"
@@ -364,15 +416,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SetUp"
-        "ProductCode" = "8:{F91F54EF-EF71-464A-A0C7-0C15110C6CFB}"
-        "PackageCode" = "8:{C693D3FF-95AC-4E30-AF5A-08D6371C5549}"
+        "ProductCode" = "8:{6BBC5964-FC5D-475C-ADE1-087FE72DF9FE}"
+        "PackageCode" = "8:{438D6131-397F-42A6-94E4-9A7DCFD16BB3}"
         "UpgradeCode" = "8:{EA5371A2-21E2-4281-9A9F-9EC087D2B576}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.1.0"
+        "ProductVersion" = "8:1.1.2"
         "Manufacturer" = "8:MDF"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"

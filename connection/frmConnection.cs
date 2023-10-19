@@ -217,7 +217,7 @@ namespace connection
             }
         }
 
-        bool OpenPort()
+        public bool OpenPort()
         {
             bool res = false;
 
@@ -256,12 +256,7 @@ namespace connection
             return res;
         }
 
-        private void btnOpenPort_Click(object sender, EventArgs e)
-        {
-            OpenPort();
-        }
-
-        private void btnClosePort_Click(object sender, EventArgs e)
+        public void ClosePort()
         {
             SerialPort.Close();
             btnClosePort.Enabled = false;
@@ -273,6 +268,16 @@ namespace connection
 
             _Status = false;
             _ComName = "";
+        }
+
+        private void btnOpenPort_Click(object sender, EventArgs e)
+        {
+            OpenPort();
+        }
+
+        private void btnClosePort_Click(object sender, EventArgs e)
+        {
+            ClosePort();
         }
 
         private void cmbBaseComand_SelectedIndexChanged(object sender, EventArgs e)

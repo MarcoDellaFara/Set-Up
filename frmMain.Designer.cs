@@ -90,6 +90,8 @@ namespace SetUp
             this.btnReadScore = new System.Windows.Forms.Button();
             this.btnWriteScore = new System.Windows.Forms.Button();
             this.btnConnection = new System.Windows.Forms.Button();
+            this.btnWriteLogo = new System.Windows.Forms.Button();
+            this.btn_UpdateDevice = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
             this.grbScore.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -113,7 +115,7 @@ namespace SetUp
             this.tstlbl1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 532);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(710, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(712, 22);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -558,7 +560,7 @@ namespace SetUp
             this.trbBrightness.Size = new System.Drawing.Size(290, 45);
             this.trbBrightness.SmallChange = 2;
             this.trbBrightness.TabIndex = 3;
-            this.trbBrightness.Value = 3;
+            this.trbBrightness.Value = 1;
             // 
             // groupBox2
             // 
@@ -756,7 +758,7 @@ namespace SetUp
             // 
             // btnReadScore
             // 
-            this.btnReadScore.Location = new System.Drawing.Point(198, 471);
+            this.btnReadScore.Location = new System.Drawing.Point(235, 471);
             this.btnReadScore.Name = "btnReadScore";
             this.btnReadScore.Size = new System.Drawing.Size(65, 51);
             this.btnReadScore.TabIndex = 53;
@@ -767,7 +769,7 @@ namespace SetUp
             // btnWriteScore
             // 
             this.btnWriteScore.Enabled = false;
-            this.btnWriteScore.Location = new System.Drawing.Point(269, 471);
+            this.btnWriteScore.Location = new System.Drawing.Point(305, 471);
             this.btnWriteScore.Name = "btnWriteScore";
             this.btnWriteScore.Size = new System.Drawing.Size(65, 51);
             this.btnWriteScore.TabIndex = 54;
@@ -785,11 +787,33 @@ namespace SetUp
             this.btnConnection.UseVisualStyleBackColor = true;
             this.btnConnection.Click += new System.EventHandler(this.btnConnection_Click);
             // 
-            // Form1
+            // btnWriteLogo
+            // 
+            this.btnWriteLogo.Location = new System.Drawing.Point(150, 471);
+            this.btnWriteLogo.Name = "btnWriteLogo";
+            this.btnWriteLogo.Size = new System.Drawing.Size(65, 51);
+            this.btnWriteLogo.TabIndex = 55;
+            this.btnWriteLogo.Text = "Logo Set";
+            this.btnWriteLogo.UseVisualStyleBackColor = true;
+            this.btnWriteLogo.Click += new System.EventHandler(this.btnWriteLogo_Click);
+            // 
+            // btn_UpdateDevice
+            // 
+            this.btn_UpdateDevice.Location = new System.Drawing.Point(771, 471);
+            this.btn_UpdateDevice.Name = "btn_UpdateDevice";
+            this.btn_UpdateDevice.Size = new System.Drawing.Size(156, 51);
+            this.btn_UpdateDevice.TabIndex = 56;
+            this.btn_UpdateDevice.Text = "Device Update";
+            this.btn_UpdateDevice.UseVisualStyleBackColor = true;
+            this.btn_UpdateDevice.Click += new System.EventHandler(this.btn_UpdateDevice_Click);
+            // 
+            // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(710, 554);
+            this.ClientSize = new System.Drawing.Size(712, 554);
+            this.Controls.Add(this.btn_UpdateDevice);
+            this.Controls.Add(this.btnWriteLogo);
             this.Controls.Add(this.btnWriteScore);
             this.Controls.Add(this.btnReadScore);
             this.Controls.Add(this.btnTimeSet);
@@ -800,7 +824,7 @@ namespace SetUp
             this.Controls.Add(this.btnConnection);
             this.Controls.Add(this.statusStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SetUp Table Ver.";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -894,6 +918,8 @@ namespace SetUp
         private System.Windows.Forms.NumericUpDown nudSetLimit;
         private System.Windows.Forms.CheckBox chkNameEnable;
         private System.Windows.Forms.CheckBox chkCambioCampo;
+        private System.Windows.Forms.Button btnWriteLogo;
+        private System.Windows.Forms.Button btn_UpdateDevice;
     }
 }
 

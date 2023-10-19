@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Connection", "connection\Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileConfig", "FileConfig\FileConfig\FileConfig.csproj", "{911DEC0E-B0FE-4CB1-905C-79EDAF9B6FDD}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Instal-SetUp", "Install-SetUp\Install-SetUp.vdproj", "{B10422E3-F911-4E0A-B45A-D39F34E9EBD7}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Install-SetUp", "Install-SetUp\Install-SetUp.vdproj", "{B10422E3-F911-4E0A-B45A-D39F34E9EBD7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
