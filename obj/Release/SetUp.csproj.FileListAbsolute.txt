@@ -30,7 +30,11 @@ C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\obj\Release\SetUp.csproj.CoreCompi
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\obj\Release\SetUp.csproj.CopyComplete
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\obj\Release\SetUp.exe
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\obj\Release\SetUp.pdb
+C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\obj\Release\SetUp.frmLastNews.resources
+C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\obj\Release\SetUp.frmMain.resources
 C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\bin\Release\App.config
+C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\bin\Release\firmware.bin
+C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\bin\Release\esptool.exe
 C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\bin\Release\SetUp.exe.config
 C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\bin\Release\SetUp.exe
 C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\bin\Release\SetUp.pdb
@@ -47,7 +51,3 @@ C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\obj\Release\SetUp.csproj.CoreCompi
 C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\obj\Release\SetUp.csproj.CopyComplete
 C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\obj\Release\SetUp.exe
 C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\obj\Release\SetUp.pdb
-C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\obj\Release\SetUp.frmLastNews.resources
-C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\obj\Release\SetUp.frmMain.resources
-C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\bin\Release\firmware.bin
-C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\bin\Release\esptool.exe

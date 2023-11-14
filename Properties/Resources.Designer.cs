@@ -63,9 +63,59 @@ namespace SetUp.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1486486302_arrow_down_downloading_storage_download_save_812271 {
+            get {
+                object obj = ResourceManager.GetObject("1486486302-arrow-down-downloading-storage-download-save_812271", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1486486310_arrow_uploading_direction_navigation_up_upload_812171 {
+            get {
+                object obj = ResourceManager.GetObject("1486486310-arrow-uploading-direction-navigation-up-upload_812171", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _1494937143_reload {
             get {
                 object obj = ResourceManager.GetObject("1494937143_reload", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Connection {
+            get {
+                object obj = ResourceManager.GetObject("Connection", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap diamond_computer_pc_sketch_jewelry_icon_193950 {
+            get {
+                object obj = ResourceManager.GetObject("diamond_computer_pc_sketch_jewelry_icon_193950", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_technologymachineelectronicdevice10_4026450_113340 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder-technologymachineelectronicdevice10-4026450_113340", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -86,6 +136,16 @@ namespace SetUp.Properties {
         internal static System.Drawing.Bitmap transfers1 {
             get {
                 object obj = ResourceManager.GetObject("transfers1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wall_clock_icon_129530 {
+            get {
+                object obj = ResourceManager.GetObject("wall_clock_icon_129530", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

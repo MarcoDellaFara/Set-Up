@@ -32,9 +32,9 @@ namespace SetUp
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tstlbl1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.btnRead = new System.Windows.Forms.Button();
             this.grbScore = new System.Windows.Forms.GroupBox();
-            this.chkCambioCampo = new System.Windows.Forms.CheckBox();
+            this.btnWriteScore = new System.Windows.Forms.Button();
+            this.btnReadScore = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.optSet4 = new System.Windows.Forms.RadioButton();
             this.optSet3 = new System.Windows.Forms.RadioButton();
@@ -54,6 +54,7 @@ namespace SetUp
             this.label11 = new System.Windows.Forms.Label();
             this.txtSetA_0 = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.chkCambioCampo = new System.Windows.Forms.CheckBox();
             this.txtTurnoB = new System.Windows.Forms.TextBox();
             this.txtTurnoA = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -61,22 +62,6 @@ namespace SetUp
             this.label6 = new System.Windows.Forms.Label();
             this.txtGameB = new System.Windows.Forms.TextBox();
             this.txtGameA = new System.Windows.Forms.TextBox();
-            this.rgbConfig = new System.Windows.Forms.GroupBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.chkNameEnable = new System.Windows.Forms.CheckBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtNameB = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtNameA = new System.Windows.Forms.TextBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.chkEnableBuzzer = new System.Windows.Forms.CheckBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.lblBrightness = new System.Windows.Forms.Label();
-            this.trbBrightness = new System.Windows.Forms.TrackBar();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.chkExtraTieBreak = new System.Windows.Forms.CheckBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.nudLimitTieBreakExtra = new System.Windows.Forms.NumericUpDown();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
             this.nudSetLimit = new System.Windows.Forms.NumericUpDown();
@@ -85,37 +70,54 @@ namespace SetUp
             this.label3 = new System.Windows.Forms.Label();
             this.nudN_Set = new System.Windows.Forms.NumericUpDown();
             this.nudLimitTieBreak = new System.Windows.Forms.NumericUpDown();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.chkExtraTieBreak = new System.Windows.Forms.CheckBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.nudLimitTieBreakExtra = new System.Windows.Forms.NumericUpDown();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lblBrightness = new System.Windows.Forms.Label();
+            this.trbBrightness = new System.Windows.Forms.TrackBar();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.chkEnableBuzzer = new System.Windows.Forms.CheckBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.chkNameEnable = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtNameB = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtNameA = new System.Windows.Forms.TextBox();
+            this.rgbConfig = new System.Windows.Forms.GroupBox();
             this.btnWrite = new System.Windows.Forms.Button();
-            this.btnTimeSet = new System.Windows.Forms.Button();
-            this.btnReadScore = new System.Windows.Forms.Button();
-            this.btnWriteScore = new System.Windows.Forms.Button();
-            this.btnConnection = new System.Windows.Forms.Button();
-            this.btnWriteLogo = new System.Windows.Forms.Button();
-            this.btn_UpdateDevice = new System.Windows.Forms.Button();
+            this.btnRead = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.communicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.timeSetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.setLogoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deviceUpdateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.grbScore.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            this.rgbConfig.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trbBrightness)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudLimitTieBreakExtra)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSetLimit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudN_Set)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLimitTieBreak)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudLimitTieBreakExtra)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trbBrightness)).BeginInit();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.rgbConfig.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tstlbl1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 532);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 561);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(712, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(701, 22);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -125,38 +127,39 @@ namespace SetUp
             this.tstlbl1.Size = new System.Drawing.Size(40, 17);
             this.tstlbl1.Text = "COM?";
             // 
-            // btnRead
-            // 
-            this.btnRead.Location = new System.Drawing.Point(388, 471);
-            this.btnRead.Name = "btnRead";
-            this.btnRead.Size = new System.Drawing.Size(148, 51);
-            this.btnRead.TabIndex = 47;
-            this.btnRead.Text = "READ";
-            this.btnRead.UseVisualStyleBackColor = true;
-            this.btnRead.Click += new System.EventHandler(this.btnRead_Click);
-            // 
             // grbScore
             // 
-            this.grbScore.Controls.Add(this.chkCambioCampo);
+            this.grbScore.Controls.Add(this.btnWriteScore);
+            this.grbScore.Controls.Add(this.btnReadScore);
             this.grbScore.Controls.Add(this.groupBox7);
             this.grbScore.Controls.Add(this.groupBox6);
-            this.grbScore.Location = new System.Drawing.Point(7, 8);
+            this.grbScore.Location = new System.Drawing.Point(0, 27);
             this.grbScore.Name = "grbScore";
-            this.grbScore.Size = new System.Drawing.Size(375, 457);
+            this.grbScore.Size = new System.Drawing.Size(375, 521);
             this.grbScore.TabIndex = 48;
             this.grbScore.TabStop = false;
             this.grbScore.Text = "Score";
             // 
-            // chkCambioCampo
+            // btnWriteScore
             // 
-            this.chkCambioCampo.Appearance = System.Windows.Forms.Appearance.Button;
-            this.chkCambioCampo.Image = global::SetUp.Properties.Resources._1494937143_reload;
-            this.chkCambioCampo.Location = new System.Drawing.Point(147, 405);
-            this.chkCambioCampo.Name = "chkCambioCampo";
-            this.chkCambioCampo.Size = new System.Drawing.Size(79, 46);
-            this.chkCambioCampo.TabIndex = 2;
-            this.chkCambioCampo.UseVisualStyleBackColor = true;
-            this.chkCambioCampo.CheckedChanged += new System.EventHandler(this.chkCambioCampo_CheckedChanged);
+            this.btnWriteScore.Enabled = false;
+            this.btnWriteScore.Image = global::SetUp.Properties.Resources._1486486310_arrow_uploading_direction_navigation_up_upload_812171;
+            this.btnWriteScore.Location = new System.Drawing.Point(202, 456);
+            this.btnWriteScore.Name = "btnWriteScore";
+            this.btnWriteScore.Size = new System.Drawing.Size(71, 58);
+            this.btnWriteScore.TabIndex = 56;
+            this.btnWriteScore.UseVisualStyleBackColor = true;
+            this.btnWriteScore.Click += new System.EventHandler(this.btnWriteScore_Click);
+            // 
+            // btnReadScore
+            // 
+            this.btnReadScore.Image = global::SetUp.Properties.Resources._1486486302_arrow_down_downloading_storage_download_save_812271;
+            this.btnReadScore.Location = new System.Drawing.Point(116, 456);
+            this.btnReadScore.Name = "btnReadScore";
+            this.btnReadScore.Size = new System.Drawing.Size(71, 58);
+            this.btnReadScore.TabIndex = 55;
+            this.btnReadScore.UseVisualStyleBackColor = true;
+            this.btnReadScore.Click += new System.EventHandler(this.btnReadScore_Click);
             // 
             // groupBox7
             // 
@@ -177,7 +180,7 @@ namespace SetUp
             this.groupBox7.Controls.Add(this.label10);
             this.groupBox7.Controls.Add(this.label11);
             this.groupBox7.Controls.Add(this.txtSetA_0);
-            this.groupBox7.Location = new System.Drawing.Point(11, 175);
+            this.groupBox7.Location = new System.Drawing.Point(12, 219);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(352, 224);
             this.groupBox7.TabIndex = 1;
@@ -246,6 +249,7 @@ namespace SetUp
             this.txtSetB_4.Name = "txtSetB_4";
             this.txtSetB_4.Size = new System.Drawing.Size(59, 55);
             this.txtSetB_4.TabIndex = 27;
+            this.txtSetB_4.TabStop = false;
             this.txtSetB_4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtSetB_3
@@ -255,6 +259,7 @@ namespace SetUp
             this.txtSetB_3.Name = "txtSetB_3";
             this.txtSetB_3.Size = new System.Drawing.Size(59, 55);
             this.txtSetB_3.TabIndex = 26;
+            this.txtSetB_3.TabStop = false;
             this.txtSetB_3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtSetB_2
@@ -264,6 +269,7 @@ namespace SetUp
             this.txtSetB_2.Name = "txtSetB_2";
             this.txtSetB_2.Size = new System.Drawing.Size(59, 55);
             this.txtSetB_2.TabIndex = 25;
+            this.txtSetB_2.TabStop = false;
             this.txtSetB_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtSetB_1
@@ -273,6 +279,7 @@ namespace SetUp
             this.txtSetB_1.Name = "txtSetB_1";
             this.txtSetB_1.Size = new System.Drawing.Size(59, 55);
             this.txtSetB_1.TabIndex = 24;
+            this.txtSetB_1.TabStop = false;
             this.txtSetB_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtSetB_0
@@ -282,6 +289,7 @@ namespace SetUp
             this.txtSetB_0.Name = "txtSetB_0";
             this.txtSetB_0.Size = new System.Drawing.Size(59, 55);
             this.txtSetB_0.TabIndex = 23;
+            this.txtSetB_0.TabStop = false;
             this.txtSetB_0.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtSetA_4
@@ -291,6 +299,7 @@ namespace SetUp
             this.txtSetA_4.Name = "txtSetA_4";
             this.txtSetA_4.Size = new System.Drawing.Size(59, 55);
             this.txtSetA_4.TabIndex = 22;
+            this.txtSetA_4.TabStop = false;
             this.txtSetA_4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtSetA_3
@@ -300,6 +309,7 @@ namespace SetUp
             this.txtSetA_3.Name = "txtSetA_3";
             this.txtSetA_3.Size = new System.Drawing.Size(59, 55);
             this.txtSetA_3.TabIndex = 21;
+            this.txtSetA_3.TabStop = false;
             this.txtSetA_3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtSetA_2
@@ -309,6 +319,7 @@ namespace SetUp
             this.txtSetA_2.Name = "txtSetA_2";
             this.txtSetA_2.Size = new System.Drawing.Size(59, 55);
             this.txtSetA_2.TabIndex = 20;
+            this.txtSetA_2.TabStop = false;
             this.txtSetA_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtSetA_1
@@ -318,6 +329,7 @@ namespace SetUp
             this.txtSetA_1.Name = "txtSetA_1";
             this.txtSetA_1.Size = new System.Drawing.Size(59, 55);
             this.txtSetA_1.TabIndex = 19;
+            this.txtSetA_1.TabStop = false;
             this.txtSetA_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label10
@@ -345,10 +357,12 @@ namespace SetUp
             this.txtSetA_0.Name = "txtSetA_0";
             this.txtSetA_0.Size = new System.Drawing.Size(59, 55);
             this.txtSetA_0.TabIndex = 13;
+            this.txtSetA_0.TabStop = false;
             this.txtSetA_0.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.chkCambioCampo);
             this.groupBox6.Controls.Add(this.txtTurnoB);
             this.groupBox6.Controls.Add(this.txtTurnoA);
             this.groupBox6.Controls.Add(this.label8);
@@ -358,10 +372,20 @@ namespace SetUp
             this.groupBox6.Controls.Add(this.txtGameA);
             this.groupBox6.Location = new System.Drawing.Point(11, 22);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(352, 141);
+            this.groupBox6.Size = new System.Drawing.Size(352, 191);
             this.groupBox6.TabIndex = 0;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Game";
+            // 
+            // chkCambioCampo
+            // 
+            this.chkCambioCampo.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkCambioCampo.Image = global::SetUp.Properties.Resources._1494937143_reload;
+            this.chkCambioCampo.Location = new System.Drawing.Point(131, 142);
+            this.chkCambioCampo.Name = "chkCambioCampo";
+            this.chkCambioCampo.Size = new System.Drawing.Size(79, 38);
+            this.chkCambioCampo.TabIndex = 21;
+            this.chkCambioCampo.UseVisualStyleBackColor = true;
             // 
             // txtTurnoB
             // 
@@ -372,6 +396,7 @@ namespace SetUp
             this.txtTurnoB.ReadOnly = true;
             this.txtTurnoB.Size = new System.Drawing.Size(89, 12);
             this.txtTurnoB.TabIndex = 20;
+            this.txtTurnoB.TabStop = false;
             this.txtTurnoB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtTurnoB_MouseClick);
             // 
             // txtTurnoA
@@ -383,6 +408,7 @@ namespace SetUp
             this.txtTurnoA.ReadOnly = true;
             this.txtTurnoA.Size = new System.Drawing.Size(89, 12);
             this.txtTurnoA.TabIndex = 19;
+            this.txtTurnoA.TabStop = false;
             this.txtTurnoA.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtTurnoA_MouseClick);
             // 
             // label8
@@ -421,6 +447,7 @@ namespace SetUp
             this.txtGameB.Name = "txtGameB";
             this.txtGameB.Size = new System.Drawing.Size(89, 55);
             this.txtGameB.TabIndex = 15;
+            this.txtGameB.TabStop = false;
             this.txtGameB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtGameA
@@ -430,190 +457,8 @@ namespace SetUp
             this.txtGameA.Name = "txtGameA";
             this.txtGameA.Size = new System.Drawing.Size(89, 55);
             this.txtGameA.TabIndex = 13;
+            this.txtGameA.TabStop = false;
             this.txtGameA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // rgbConfig
-            // 
-            this.rgbConfig.Controls.Add(this.groupBox5);
-            this.rgbConfig.Controls.Add(this.groupBox4);
-            this.rgbConfig.Controls.Add(this.groupBox3);
-            this.rgbConfig.Controls.Add(this.groupBox2);
-            this.rgbConfig.Controls.Add(this.groupBox1);
-            this.rgbConfig.Location = new System.Drawing.Point(388, 8);
-            this.rgbConfig.Name = "rgbConfig";
-            this.rgbConfig.Size = new System.Drawing.Size(312, 457);
-            this.rgbConfig.TabIndex = 49;
-            this.rgbConfig.TabStop = false;
-            this.rgbConfig.Text = "Config";
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.chkNameEnable);
-            this.groupBox5.Controls.Add(this.label2);
-            this.groupBox5.Controls.Add(this.txtNameB);
-            this.groupBox5.Controls.Add(this.label1);
-            this.groupBox5.Controls.Add(this.txtNameA);
-            this.groupBox5.Location = new System.Drawing.Point(164, 19);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(142, 250);
-            this.groupBox5.TabIndex = 21;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Setting Name";
-            // 
-            // chkNameEnable
-            // 
-            this.chkNameEnable.AutoSize = true;
-            this.chkNameEnable.Location = new System.Drawing.Point(10, 26);
-            this.chkNameEnable.Name = "chkNameEnable";
-            this.chkNameEnable.Size = new System.Drawing.Size(90, 17);
-            this.chkNameEnable.TabIndex = 16;
-            this.chkNameEnable.Text = "Name Enable";
-            this.chkNameEnable.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 150);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 13);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Player 2";
-            // 
-            // txtNameB
-            // 
-            this.txtNameB.Font = new System.Drawing.Font("Arial Black", 25.25F, System.Drawing.FontStyle.Bold);
-            this.txtNameB.Location = new System.Drawing.Point(26, 166);
-            this.txtNameB.Name = "txtNameB";
-            this.txtNameB.Size = new System.Drawing.Size(89, 55);
-            this.txtNameB.TabIndex = 14;
-            this.txtNameB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtNameB.TextChanged += new System.EventHandler(this.txtNameB_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 61);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 13);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Player 1";
-            // 
-            // txtNameA
-            // 
-            this.txtNameA.Font = new System.Drawing.Font("Arial Black", 25.25F, System.Drawing.FontStyle.Bold);
-            this.txtNameA.Location = new System.Drawing.Point(26, 77);
-            this.txtNameA.Name = "txtNameA";
-            this.txtNameA.Size = new System.Drawing.Size(89, 55);
-            this.txtNameA.TabIndex = 12;
-            this.txtNameA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtNameA.TextChanged += new System.EventHandler(this.txtNameA_TextChanged);
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.chkEnableBuzzer);
-            this.groupBox4.Location = new System.Drawing.Point(6, 405);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(300, 46);
-            this.groupBox4.TabIndex = 20;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Setting Sound";
-            // 
-            // chkEnableBuzzer
-            // 
-            this.chkEnableBuzzer.AutoSize = true;
-            this.chkEnableBuzzer.Checked = true;
-            this.chkEnableBuzzer.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkEnableBuzzer.Location = new System.Drawing.Point(7, 21);
-            this.chkEnableBuzzer.Name = "chkEnableBuzzer";
-            this.chkEnableBuzzer.Size = new System.Drawing.Size(77, 17);
-            this.chkEnableBuzzer.TabIndex = 2;
-            this.chkEnableBuzzer.Text = "Buzzer ON";
-            this.chkEnableBuzzer.UseVisualStyleBackColor = true;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.lblBrightness);
-            this.groupBox3.Controls.Add(this.trbBrightness);
-            this.groupBox3.Location = new System.Drawing.Point(6, 311);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(300, 88);
-            this.groupBox3.TabIndex = 19;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Setting Display Led";
-            // 
-            // lblBrightness
-            // 
-            this.lblBrightness.AutoSize = true;
-            this.lblBrightness.Location = new System.Drawing.Point(6, 21);
-            this.lblBrightness.Name = "lblBrightness";
-            this.lblBrightness.Size = new System.Drawing.Size(56, 13);
-            this.lblBrightness.TabIndex = 4;
-            this.lblBrightness.Text = "Brightness";
-            // 
-            // trbBrightness
-            // 
-            this.trbBrightness.LargeChange = 1;
-            this.trbBrightness.Location = new System.Drawing.Point(4, 37);
-            this.trbBrightness.Maximum = 12;
-            this.trbBrightness.Minimum = 1;
-            this.trbBrightness.Name = "trbBrightness";
-            this.trbBrightness.Size = new System.Drawing.Size(290, 45);
-            this.trbBrightness.SmallChange = 2;
-            this.trbBrightness.TabIndex = 3;
-            this.trbBrightness.Value = 1;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.chkExtraTieBreak);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.nudLimitTieBreakExtra);
-            this.groupBox2.Location = new System.Drawing.Point(6, 166);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(152, 103);
-            this.groupBox2.TabIndex = 18;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Final Times";
-            // 
-            // chkExtraTieBreak
-            // 
-            this.chkExtraTieBreak.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.chkExtraTieBreak.Location = new System.Drawing.Point(10, 19);
-            this.chkExtraTieBreak.Name = "chkExtraTieBreak";
-            this.chkExtraTieBreak.Size = new System.Drawing.Size(135, 17);
-            this.chkExtraTieBreak.TabIndex = 20;
-            this.chkExtraTieBreak.Text = "Enable Extra Tie-Breck";
-            this.chkExtraTieBreak.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(7, 79);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 13);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Tie-Breck Limit";
-            // 
-            // nudLimitTieBreakExtra
-            // 
-            this.nudLimitTieBreakExtra.Location = new System.Drawing.Point(104, 77);
-            this.nudLimitTieBreakExtra.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.nudLimitTieBreakExtra.Minimum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.nudLimitTieBreakExtra.Name = "nudLimitTieBreakExtra";
-            this.nudLimitTieBreakExtra.Size = new System.Drawing.Size(32, 20);
-            this.nudLimitTieBreakExtra.TabIndex = 16;
-            this.nudLimitTieBreakExtra.Value = new decimal(new int[] {
-            7,
-            0,
-            0,
-            0});
             // 
             // groupBox1
             // 
@@ -735,95 +580,270 @@ namespace SetUp
             0,
             0});
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.chkExtraTieBreak);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.nudLimitTieBreakExtra);
+            this.groupBox2.Location = new System.Drawing.Point(6, 166);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(152, 103);
+            this.groupBox2.TabIndex = 18;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Final Times";
+            // 
+            // chkExtraTieBreak
+            // 
+            this.chkExtraTieBreak.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkExtraTieBreak.Location = new System.Drawing.Point(10, 19);
+            this.chkExtraTieBreak.Name = "chkExtraTieBreak";
+            this.chkExtraTieBreak.Size = new System.Drawing.Size(135, 17);
+            this.chkExtraTieBreak.TabIndex = 20;
+            this.chkExtraTieBreak.Text = "Enable Extra Tie-Breck";
+            this.chkExtraTieBreak.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(7, 79);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(77, 13);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Tie-Breck Limit";
+            // 
+            // nudLimitTieBreakExtra
+            // 
+            this.nudLimitTieBreakExtra.Location = new System.Drawing.Point(104, 77);
+            this.nudLimitTieBreakExtra.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.nudLimitTieBreakExtra.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.nudLimitTieBreakExtra.Name = "nudLimitTieBreakExtra";
+            this.nudLimitTieBreakExtra.Size = new System.Drawing.Size(32, 20);
+            this.nudLimitTieBreakExtra.TabIndex = 16;
+            this.nudLimitTieBreakExtra.Value = new decimal(new int[] {
+            7,
+            0,
+            0,
+            0});
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.lblBrightness);
+            this.groupBox3.Controls.Add(this.trbBrightness);
+            this.groupBox3.Location = new System.Drawing.Point(6, 311);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(300, 88);
+            this.groupBox3.TabIndex = 19;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Setting Display Led";
+            // 
+            // lblBrightness
+            // 
+            this.lblBrightness.AutoSize = true;
+            this.lblBrightness.Location = new System.Drawing.Point(6, 21);
+            this.lblBrightness.Name = "lblBrightness";
+            this.lblBrightness.Size = new System.Drawing.Size(56, 13);
+            this.lblBrightness.TabIndex = 4;
+            this.lblBrightness.Text = "Brightness";
+            // 
+            // trbBrightness
+            // 
+            this.trbBrightness.LargeChange = 1;
+            this.trbBrightness.Location = new System.Drawing.Point(4, 37);
+            this.trbBrightness.Maximum = 12;
+            this.trbBrightness.Minimum = 1;
+            this.trbBrightness.Name = "trbBrightness";
+            this.trbBrightness.Size = new System.Drawing.Size(290, 45);
+            this.trbBrightness.SmallChange = 2;
+            this.trbBrightness.TabIndex = 3;
+            this.trbBrightness.Value = 1;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.chkEnableBuzzer);
+            this.groupBox4.Location = new System.Drawing.Point(6, 405);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(300, 46);
+            this.groupBox4.TabIndex = 20;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Setting Sound";
+            // 
+            // chkEnableBuzzer
+            // 
+            this.chkEnableBuzzer.AutoSize = true;
+            this.chkEnableBuzzer.Checked = true;
+            this.chkEnableBuzzer.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkEnableBuzzer.Location = new System.Drawing.Point(7, 21);
+            this.chkEnableBuzzer.Name = "chkEnableBuzzer";
+            this.chkEnableBuzzer.Size = new System.Drawing.Size(77, 17);
+            this.chkEnableBuzzer.TabIndex = 2;
+            this.chkEnableBuzzer.Text = "Buzzer ON";
+            this.chkEnableBuzzer.UseVisualStyleBackColor = true;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.chkNameEnable);
+            this.groupBox5.Controls.Add(this.label2);
+            this.groupBox5.Controls.Add(this.txtNameB);
+            this.groupBox5.Controls.Add(this.label1);
+            this.groupBox5.Controls.Add(this.txtNameA);
+            this.groupBox5.Location = new System.Drawing.Point(164, 19);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(142, 250);
+            this.groupBox5.TabIndex = 21;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Setting Name";
+            // 
+            // chkNameEnable
+            // 
+            this.chkNameEnable.AutoSize = true;
+            this.chkNameEnable.Location = new System.Drawing.Point(10, 26);
+            this.chkNameEnable.Name = "chkNameEnable";
+            this.chkNameEnable.Size = new System.Drawing.Size(90, 17);
+            this.chkNameEnable.TabIndex = 16;
+            this.chkNameEnable.Text = "Name Enable";
+            this.chkNameEnable.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(26, 150);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 13);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Player 2";
+            // 
+            // txtNameB
+            // 
+            this.txtNameB.Font = new System.Drawing.Font("Arial Black", 25.25F, System.Drawing.FontStyle.Bold);
+            this.txtNameB.Location = new System.Drawing.Point(26, 166);
+            this.txtNameB.Name = "txtNameB";
+            this.txtNameB.Size = new System.Drawing.Size(89, 55);
+            this.txtNameB.TabIndex = 14;
+            this.txtNameB.TabStop = false;
+            this.txtNameB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNameB.TextChanged += new System.EventHandler(this.txtNameB_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(26, 61);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Player 1";
+            // 
+            // txtNameA
+            // 
+            this.txtNameA.Font = new System.Drawing.Font("Arial Black", 25.25F, System.Drawing.FontStyle.Bold);
+            this.txtNameA.Location = new System.Drawing.Point(26, 77);
+            this.txtNameA.Name = "txtNameA";
+            this.txtNameA.Size = new System.Drawing.Size(89, 55);
+            this.txtNameA.TabIndex = 12;
+            this.txtNameA.TabStop = false;
+            this.txtNameA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNameA.TextChanged += new System.EventHandler(this.txtNameA_TextChanged);
+            // 
+            // rgbConfig
+            // 
+            this.rgbConfig.Controls.Add(this.btnWrite);
+            this.rgbConfig.Controls.Add(this.btnRead);
+            this.rgbConfig.Controls.Add(this.groupBox5);
+            this.rgbConfig.Controls.Add(this.groupBox4);
+            this.rgbConfig.Controls.Add(this.groupBox3);
+            this.rgbConfig.Controls.Add(this.groupBox2);
+            this.rgbConfig.Controls.Add(this.groupBox1);
+            this.rgbConfig.Location = new System.Drawing.Point(381, 27);
+            this.rgbConfig.Name = "rgbConfig";
+            this.rgbConfig.Size = new System.Drawing.Size(312, 521);
+            this.rgbConfig.TabIndex = 49;
+            this.rgbConfig.TabStop = false;
+            this.rgbConfig.Text = "Configuration";
+            // 
             // btnWrite
             // 
             this.btnWrite.Enabled = false;
-            this.btnWrite.Location = new System.Drawing.Point(552, 471);
+            this.btnWrite.Image = global::SetUp.Properties.Resources._1486486310_arrow_uploading_direction_navigation_up_upload_812171;
+            this.btnWrite.Location = new System.Drawing.Point(164, 458);
             this.btnWrite.Name = "btnWrite";
-            this.btnWrite.Size = new System.Drawing.Size(148, 51);
-            this.btnWrite.TabIndex = 50;
-            this.btnWrite.Text = "WRITE";
+            this.btnWrite.Size = new System.Drawing.Size(71, 57);
+            this.btnWrite.TabIndex = 52;
             this.btnWrite.UseVisualStyleBackColor = true;
             this.btnWrite.Click += new System.EventHandler(this.btnWrite_Click);
             // 
-            // btnTimeSet
+            // btnRead
             // 
-            this.btnTimeSet.Location = new System.Drawing.Point(70, 471);
-            this.btnTimeSet.Name = "btnTimeSet";
-            this.btnTimeSet.Size = new System.Drawing.Size(65, 51);
-            this.btnTimeSet.TabIndex = 51;
-            this.btnTimeSet.Text = "Time Set";
-            this.btnTimeSet.UseVisualStyleBackColor = true;
-            this.btnTimeSet.Click += new System.EventHandler(this.btnTimeSet_Click);
+            this.btnRead.Image = global::SetUp.Properties.Resources._1486486302_arrow_down_downloading_storage_download_save_812271;
+            this.btnRead.Location = new System.Drawing.Point(80, 459);
+            this.btnRead.Name = "btnRead";
+            this.btnRead.Size = new System.Drawing.Size(71, 56);
+            this.btnRead.TabIndex = 51;
+            this.btnRead.UseVisualStyleBackColor = true;
+            this.btnRead.Click += new System.EventHandler(this.btnRead_Click);
             // 
-            // btnReadScore
+            // menuStrip1
             // 
-            this.btnReadScore.Location = new System.Drawing.Point(235, 471);
-            this.btnReadScore.Name = "btnReadScore";
-            this.btnReadScore.Size = new System.Drawing.Size(65, 51);
-            this.btnReadScore.TabIndex = 53;
-            this.btnReadScore.Text = "READ SCORE";
-            this.btnReadScore.UseVisualStyleBackColor = true;
-            this.btnReadScore.Click += new System.EventHandler(this.btnReadScore_Click);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.communicationToolStripMenuItem,
+            this.timeSetToolStripMenuItem,
+            this.setLogoToolStripMenuItem,
+            this.deviceUpdateToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(701, 24);
+            this.menuStrip1.TabIndex = 57;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // btnWriteScore
+            // communicationToolStripMenuItem
             // 
-            this.btnWriteScore.Enabled = false;
-            this.btnWriteScore.Location = new System.Drawing.Point(305, 471);
-            this.btnWriteScore.Name = "btnWriteScore";
-            this.btnWriteScore.Size = new System.Drawing.Size(65, 51);
-            this.btnWriteScore.TabIndex = 54;
-            this.btnWriteScore.Text = "WRITE SCORE";
-            this.btnWriteScore.UseVisualStyleBackColor = true;
-            this.btnWriteScore.Click += new System.EventHandler(this.btnWriteScore_Click);
+            this.communicationToolStripMenuItem.Image = global::SetUp.Properties.Resources.Connection;
+            this.communicationToolStripMenuItem.Name = "communicationToolStripMenuItem";
+            this.communicationToolStripMenuItem.Size = new System.Drawing.Size(122, 20);
+            this.communicationToolStripMenuItem.Text = "Communication";
+            this.communicationToolStripMenuItem.Click += new System.EventHandler(this.communicationToolStripMenuItem_Click);
             // 
-            // btnConnection
+            // timeSetToolStripMenuItem
             // 
-            this.btnConnection.Image = ((System.Drawing.Image)(resources.GetObject("btnConnection.Image")));
-            this.btnConnection.Location = new System.Drawing.Point(12, 471);
-            this.btnConnection.Name = "btnConnection";
-            this.btnConnection.Size = new System.Drawing.Size(52, 51);
-            this.btnConnection.TabIndex = 46;
-            this.btnConnection.UseVisualStyleBackColor = true;
-            this.btnConnection.Click += new System.EventHandler(this.btnConnection_Click);
+            this.timeSetToolStripMenuItem.Image = global::SetUp.Properties.Resources.wall_clock_icon_129530;
+            this.timeSetToolStripMenuItem.Name = "timeSetToolStripMenuItem";
+            this.timeSetToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.timeSetToolStripMenuItem.Text = "Time Set";
+            this.timeSetToolStripMenuItem.Click += new System.EventHandler(this.timeSetToolStripMenuItem_Click);
             // 
-            // btnWriteLogo
+            // setLogoToolStripMenuItem
             // 
-            this.btnWriteLogo.Location = new System.Drawing.Point(150, 471);
-            this.btnWriteLogo.Name = "btnWriteLogo";
-            this.btnWriteLogo.Size = new System.Drawing.Size(65, 51);
-            this.btnWriteLogo.TabIndex = 55;
-            this.btnWriteLogo.Text = "Logo Set";
-            this.btnWriteLogo.UseVisualStyleBackColor = true;
-            this.btnWriteLogo.Click += new System.EventHandler(this.btnWriteLogo_Click);
+            this.setLogoToolStripMenuItem.Image = global::SetUp.Properties.Resources.diamond_computer_pc_sketch_jewelry_icon_193950;
+            this.setLogoToolStripMenuItem.Name = "setLogoToolStripMenuItem";
+            this.setLogoToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
+            this.setLogoToolStripMenuItem.Text = "Set Logo";
+            this.setLogoToolStripMenuItem.Click += new System.EventHandler(this.setLogoToolStripMenuItem_Click);
             // 
-            // btn_UpdateDevice
+            // deviceUpdateToolStripMenuItem
             // 
-            this.btn_UpdateDevice.Location = new System.Drawing.Point(771, 471);
-            this.btn_UpdateDevice.Name = "btn_UpdateDevice";
-            this.btn_UpdateDevice.Size = new System.Drawing.Size(156, 51);
-            this.btn_UpdateDevice.TabIndex = 56;
-            this.btn_UpdateDevice.Text = "Device Update";
-            this.btn_UpdateDevice.UseVisualStyleBackColor = true;
-            this.btn_UpdateDevice.Click += new System.EventHandler(this.btn_UpdateDevice_Click);
+            this.deviceUpdateToolStripMenuItem.Image = global::SetUp.Properties.Resources.iconfinder_technologymachineelectronicdevice10_4026450_113340;
+            this.deviceUpdateToolStripMenuItem.Name = "deviceUpdateToolStripMenuItem";
+            this.deviceUpdateToolStripMenuItem.Size = new System.Drawing.Size(111, 20);
+            this.deviceUpdateToolStripMenuItem.Text = "Device Update";
+            this.deviceUpdateToolStripMenuItem.Click += new System.EventHandler(this.deviceUpdateToolStripMenuItem_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(712, 554);
-            this.Controls.Add(this.btn_UpdateDevice);
-            this.Controls.Add(this.btnWriteLogo);
-            this.Controls.Add(this.btnWriteScore);
-            this.Controls.Add(this.btnReadScore);
-            this.Controls.Add(this.btnTimeSet);
-            this.Controls.Add(this.btnWrite);
+            this.ClientSize = new System.Drawing.Size(701, 583);
             this.Controls.Add(this.rgbConfig);
             this.Controls.Add(this.grbScore);
-            this.Controls.Add(this.btnRead);
-            this.Controls.Add(this.btnConnection);
             this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SetUp Table Ver.";
@@ -836,22 +856,24 @@ namespace SetUp
             this.groupBox7.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
-            this.rgbConfig.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trbBrightness)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudLimitTieBreakExtra)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSetLimit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudN_Set)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLimitTieBreak)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudLimitTieBreakExtra)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trbBrightness)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.rgbConfig.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -860,32 +882,7 @@ namespace SetUp
         #endregion
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel tstlbl1;
-        private System.Windows.Forms.Button btnConnection;
-        private System.Windows.Forms.Button btnRead;
         private System.Windows.Forms.GroupBox grbScore;
-        private System.Windows.Forms.GroupBox rgbConfig;
-        private System.Windows.Forms.Button btnWrite;
-        private System.Windows.Forms.Button btnTimeSet;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.CheckBox chkExtraTieBreak;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown nudLimitTieBreakExtra;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.NumericUpDown nudN_Set;
-        private System.Windows.Forms.NumericUpDown nudLimitTieBreak;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtNameB;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtNameA;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.CheckBox chkEnableBuzzer;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label lblBrightness;
-        private System.Windows.Forms.TrackBar trbBrightness;
-        private System.Windows.Forms.CheckBox chkKillerPoint;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -905,7 +902,6 @@ namespace SetUp
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtSetA_0;
-        private System.Windows.Forms.Button btnReadScore;
         private System.Windows.Forms.RadioButton optSet4;
         private System.Windows.Forms.RadioButton optSet3;
         private System.Windows.Forms.RadioButton optSet2;
@@ -913,13 +909,40 @@ namespace SetUp
         private System.Windows.Forms.RadioButton optSet0;
         private System.Windows.Forms.TextBox txtTurnoB;
         private System.Windows.Forms.TextBox txtTurnoA;
-        private System.Windows.Forms.Button btnWriteScore;
+        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.NumericUpDown nudSetLimit;
+        private System.Windows.Forms.CheckBox chkKillerPoint;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.NumericUpDown nudN_Set;
+        private System.Windows.Forms.NumericUpDown nudLimitTieBreak;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.CheckBox chkExtraTieBreak;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.NumericUpDown nudLimitTieBreakExtra;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label lblBrightness;
+        private System.Windows.Forms.TrackBar trbBrightness;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.CheckBox chkEnableBuzzer;
+        private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.CheckBox chkNameEnable;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtNameB;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtNameA;
+        private System.Windows.Forms.GroupBox rgbConfig;
+        private System.Windows.Forms.Button btnWrite;
+        private System.Windows.Forms.Button btnRead;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem timeSetToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem communicationToolStripMenuItem;
+        private System.Windows.Forms.Button btnWriteScore;
+        private System.Windows.Forms.Button btnReadScore;
         private System.Windows.Forms.CheckBox chkCambioCampo;
-        private System.Windows.Forms.Button btnWriteLogo;
-        private System.Windows.Forms.Button btn_UpdateDevice;
+        private System.Windows.Forms.ToolStripMenuItem setLogoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deviceUpdateToolStripMenuItem;
     }
 }
 

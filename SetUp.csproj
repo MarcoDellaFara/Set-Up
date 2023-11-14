@@ -123,7 +123,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="firmware.bin">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
@@ -150,8 +150,18 @@
     <AdditionalFiles Include="esptool.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </AdditionalFiles>
-    <Content Include="NewFolder1\esptool.exe" />
+    <None Include="Resources\Connection.png" />
+    <None Include="Resources\diamond_computer_pc_sketch_jewelry_icon_193950.ico" />
+    <None Include="Resources\1486486302-arrow-down-downloading-storage-download-save_81227.ico" />
+    <None Include="Resources\1486486310-arrow-uploading-direction-navigation-up-upload_81217.ico" />
+    <None Include="Resources\1486486302-arrow-down-downloading-storage-download-save_812271.ico" />
+    <None Include="Resources\1486486310-arrow-uploading-direction-navigation-up-upload_812171.ico" />
+    <None Include="Resources\1486486302-arrow-down-downloading-storage-download-save_812272.ico" />
+    <None Include="Resources\1486486310-arrow-uploading-direction-navigation-up-upload_812172.ico" />
+    <None Include="Resources\diamond_computer_pc_sketch_jewelry_icon_1939501.ico" />
+    <None Include="Resources\iconfinder-technologymachineelectronicdevice10-4026450_113340.ico" />
     <Content Include="Resources\LastNews.png" />
+    <None Include="Resources\wall_clock_icon_129530.ico" />
     <Content Include="TennisScore.ico" />
     <Content Include="Tennis_Ball.ico" />
     <None Include="Resources\transfers.png" />

@@ -45,8 +45,6 @@ frmConnection frmCON = new frmConnection();
             string VerCompile = Application.ProductVersion.Substring(6);
 
             this.Text = this.Text + LocalVer + " (" + VerCompile + ")";
-
-            Resfresh_StatusCom();
         }
 
         private void Form1_Shown(object sender, EventArgs e)
@@ -121,6 +119,9 @@ frmConnection frmCON = new frmConnection();
                     }
                 }
             }
+
+            Resfresh_StatusCom();
+
         }
 
         //private static string GetHomePath()
@@ -189,23 +190,27 @@ frmConnection frmCON = new frmConnection();
             }
         }
 
-        private void Resfresh_StatusCom()
+        private bool Resfresh_StatusCom()
         {
+            bool res = false;
+
             if (frmCON.Status)
             {
                 tstlbl1.Text = frmCON.ComName;
                 tstlbl1.BackColor = Color.Lime;
-            }
-        }
 
-        private void btnConnection_Click(object sender, EventArgs e)
-        {
-            frmCON.Show();
-            while (frmCON.Visible)
-            {
-                Application.DoEvents();
+                res = true;
+
+                clearBuffer();
             }
-            Resfresh_StatusCom();
+            else
+            {
+                tstlbl1.Text = "COM?";
+                tstlbl1.BackColor = Color.FromArgb(255,240,240,240);
+
+                MessageBox.Show("Collegamento Assente", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return res;
         }
 
         int RxCount = 0;
@@ -214,7 +219,7 @@ frmConnection frmCON = new frmConnection();
 
         private void btnRead_Click(object sender, EventArgs e)
         {
-            //clearBuffer();
+            if (!Resfresh_StatusCom()) { return; }
 
             frmCON.SerialPort.Write("SetUpR");
             Thread.Sleep(1000);
@@ -259,122 +264,9 @@ frmConnection frmCON = new frmConnection();
             }
         }
 
-        private void btnReadScore_Click(object sender, EventArgs e)
-        {
-            //clearBuffer();
-
-            frmCON.SerialPort.Write("ScoreR");
-            Thread.Sleep(1000);
-            RxCount = frmCON.SerialPort.BytesToRead;
-            frmCON.SerialPort.Read(buf, 0, RxCount);
-
-            txtGameA.Text = buf[0].ToString();
-            txtGameB.Text = buf[1].ToString();
-
-            txtSetA_0.Text = buf[2].ToString();
-            txtSetA_1.Text = buf[3].ToString();
-            txtSetA_2.Text = buf[4].ToString();
-            txtSetA_3.Text = buf[5].ToString();
-            txtSetA_4.Text = buf[6].ToString();
-
-            txtSetB_0.Text = buf[7].ToString();
-            txtSetB_1.Text = buf[8].ToString();
-            txtSetB_2.Text = buf[9].ToString();
-            txtSetB_3.Text = buf[10].ToString();
-            txtSetB_4.Text = buf[11].ToString();
-
-            switch (buf[12])
-            {
-                case 0:
-                    optSet0.Checked = true;
-                    break;
-                case 1:
-                    optSet1.Checked = true;
-                    break;
-                case 2:
-                    optSet2.Checked = true;
-                    break;
-                case 3:
-                    optSet3.Checked = true;
-                    break;
-                case 4:
-                    optSet4.Checked = true;
-                    break;
-            }
-
-            if ((buf[13] & 2) == 2)
-            {
-                txtTurnoA.BackColor = Color.White;
-                txtTurnoB.BackColor = Color.Yellow;
-            }
-            else
-            {
-                txtTurnoB.BackColor = Color.White;
-                txtTurnoA.BackColor = Color.Yellow;
-            }
-
-            if ((buf[13] & 4) == 4)
-            {
-                chkCambioCampo.Checked = true;
-            }
-            else
-            {
-                chkCambioCampo.Checked = false;
-            }
-
-            btnWriteScore.Enabled = true;
-        }
-
-        private void btnWriteScore_Click(object sender, EventArgs e)
-        {
-            //clearBuffer();
-
-            buf[0] = (byte)Int16.Parse(txtGameA.Text);
-            buf[1] = (byte)Int16.Parse(txtGameB.Text);
-
-            buf[2] = (byte)Int16.Parse(txtSetA_0.Text);
-            buf[3] = (byte)Int16.Parse(txtSetA_1.Text);
-            buf[4] = (byte)Int16.Parse(txtSetA_2.Text);
-            buf[5] = (byte)Int16.Parse(txtSetA_3.Text);
-            buf[6] = (byte)Int16.Parse(txtSetA_4.Text);
-
-            buf[7] = (byte)Int16.Parse(txtSetB_0.Text);
-            buf[8] = (byte)Int16.Parse(txtSetB_1.Text);
-            buf[9] = (byte)Int16.Parse(txtSetB_2.Text);
-            buf[10] = (byte)Int16.Parse(txtSetB_3.Text);
-            buf[11] = (byte)Int16.Parse(txtSetB_4.Text);
-
-            if (optSet0.Checked) { buf[12] = 0; }
-            else if (optSet1.Checked) { buf[12] = 1; }
-            else if (optSet2.Checked) { buf[12] = 2; }
-            else if (optSet3.Checked) { buf[12] = 3; }
-            else if (optSet4.Checked) { buf[12] = 4; }
-
-            if (txtTurnoB.BackColor == Color.Yellow)
-            {
-                buf[13] |= 0b00000010;
-            }
-            else
-            {
-                buf[13] &= 0b11111101;
-            }
-
-            if (chkCambioCampo.Checked)
-            {
-                buf[13] |= 0b00000100;
-            }
-            else
-            {
-                buf[13] &= 0b11111011;
-            }
-
-            frmCON.SerialPort.Write("ScoreW");
-            frmCON.SerialPort.Write(buf, 0, 14);
-        }
-
         private void btnWrite_Click(object sender, EventArgs e)
         {
-            clearBuffer();
+            if (!Resfresh_StatusCom()) { return; }
 
             buf[0] = 0;
             if(chkKillerPoint.Checked) { buf[0] += 1; }
@@ -424,7 +316,7 @@ frmConnection frmCON = new frmConnection();
             frmCON.SerialPort.Write(buf, 0, 13);
         }
 
-        private void btnTimeSet_Click(object sender, EventArgs e)
+        private void TimeSet()
         {
             clearBuffer();
 
@@ -506,12 +398,153 @@ frmConnection frmCON = new frmConnection();
             frmCON.SerialPort.DiscardOutBuffer();
         }
 
-        private void btnWriteLogo_Click(object sender, EventArgs e)
+
+        private void btn_UpdateDevice_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timeSetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!Resfresh_StatusCom()) { return; }
+
+            TimeSet();
+        }
+
+        private void communicationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCON.Show();
+            while (frmCON.Visible)
+            {
+                Application.DoEvents();
+            }
+
+            Resfresh_StatusCom();
+
+        }
+
+        private void btnReadScore_Click(object sender, EventArgs e)
+        {
+            if (!Resfresh_StatusCom()) { return; }
+
+            frmCON.SerialPort.Write("ScoreR");
+            Thread.Sleep(1000);
+            RxCount = frmCON.SerialPort.BytesToRead;
+            frmCON.SerialPort.Read(buf, 0, RxCount);
+
+            txtGameA.Text = buf[0].ToString();
+            txtGameB.Text = buf[1].ToString();
+
+            txtSetA_0.Text = buf[2].ToString();
+            txtSetA_1.Text = buf[3].ToString();
+            txtSetA_2.Text = buf[4].ToString();
+            txtSetA_3.Text = buf[5].ToString();
+            txtSetA_4.Text = buf[6].ToString();
+
+            txtSetB_0.Text = buf[7].ToString();
+            txtSetB_1.Text = buf[8].ToString();
+            txtSetB_2.Text = buf[9].ToString();
+            txtSetB_3.Text = buf[10].ToString();
+            txtSetB_4.Text = buf[11].ToString();
+
+            switch (buf[12])
+            {
+                case 0:
+                    optSet0.Checked = true;
+                    break;
+                case 1:
+                    optSet1.Checked = true;
+                    break;
+                case 2:
+                    optSet2.Checked = true;
+                    break;
+                case 3:
+                    optSet3.Checked = true;
+                    break;
+                case 4:
+                    optSet4.Checked = true;
+                    break;
+            }
+
+            if ((buf[13] & 2) == 2)
+            {
+                txtTurnoA.BackColor = Color.White;
+                txtTurnoB.BackColor = Color.Yellow;
+            }
+            else
+            {
+                txtTurnoB.BackColor = Color.White;
+                txtTurnoA.BackColor = Color.Yellow;
+            }
+
+            if ((buf[13] & 4) == 4)
+            {
+                chkCambioCampo.Checked = true;
+            }
+            else
+            {
+                chkCambioCampo.Checked = false;
+            }
+
+            btnWriteScore.Enabled = true;
+        }
+
+        private void btnWriteScore_Click(object sender, EventArgs e)
+        {
+            if (!Resfresh_StatusCom()) { return; }
+
+            buf[0] = (byte)Int16.Parse(txtGameA.Text);
+            buf[1] = (byte)Int16.Parse(txtGameB.Text);
+
+            buf[2] = (byte)Int16.Parse(txtSetA_0.Text);
+            buf[3] = (byte)Int16.Parse(txtSetA_1.Text);
+            buf[4] = (byte)Int16.Parse(txtSetA_2.Text);
+            buf[5] = (byte)Int16.Parse(txtSetA_3.Text);
+            buf[6] = (byte)Int16.Parse(txtSetA_4.Text);
+
+            buf[7] = (byte)Int16.Parse(txtSetB_0.Text);
+            buf[8] = (byte)Int16.Parse(txtSetB_1.Text);
+            buf[9] = (byte)Int16.Parse(txtSetB_2.Text);
+            buf[10] = (byte)Int16.Parse(txtSetB_3.Text);
+            buf[11] = (byte)Int16.Parse(txtSetB_4.Text);
+
+            if (optSet0.Checked) { buf[12] = 0; }
+            else if (optSet1.Checked) { buf[12] = 1; }
+            else if (optSet2.Checked) { buf[12] = 2; }
+            else if (optSet3.Checked) { buf[12] = 3; }
+            else if (optSet4.Checked) { buf[12] = 4; }
+
+            if (txtTurnoB.BackColor == Color.Yellow)
+            {
+                buf[13] |= 0b00000010;
+            }
+            else
+            {
+                buf[13] &= 0b11111101;
+            }
+
+            if (chkCambioCampo.Checked)
+            {
+                buf[13] |= 0b00000100;
+            }
+            else
+            {
+                buf[13] &= 0b11111011;
+            }
+
+            frmCON.SerialPort.Write("ScoreW");
+            frmCON.SerialPort.Write(buf, 0, 14);
+
+        }
+
+        private void setLogoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string filepath = "";
             //byte[] pack = { 255, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
             byte[] pack = new byte[768 * 2];
             byte[] s_pack = new byte[32];
+
+            if (!Resfresh_StatusCom()) { return; }
 
             using (OpenFileDialog ofile = new OpenFileDialog())
             {
@@ -554,7 +587,7 @@ frmConnection frmCON = new frmConnection();
                 {
                     //Thread.Sleep(10);
 
-                    Array.Copy(pack,i * 32, s_pack ,0, 32);
+                    Array.Copy(pack, i * 32, s_pack, 0, 32);
 
                     frmCON.SerialPort.Write(s_pack, 0, 32);
 
@@ -582,7 +615,7 @@ frmConnection frmCON = new frmConnection();
             }
         }
 
-        private void btn_UpdateDevice_Click(object sender, EventArgs e)
+        private void deviceUpdateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // For the example
             //string ex1 = Application.StartupPath;
@@ -591,12 +624,14 @@ frmConnection frmCON = new frmConnection();
             // Use ProcessStartInfo class
             //ProcessStartInfo startInfo = new ProcessStartInfo();
 
+            if (!Resfresh_StatusCom()) { return; }
+
             try
             {
                 frmCON.ClosePort();
 
                 Process process = new Process();
-                
+
                 process.StartInfo.CreateNoWindow = true;
                 process.StartInfo.UseShellExecute = false;
                 process.StartInfo.RedirectStandardOutput = true;
@@ -614,13 +649,13 @@ frmConnection frmCON = new frmConnection();
 
                 Boolean marco = output.Contains("Hash of data verified.");
 
-                if (!marco) { throw new Exception();}
+                if (!marco) { throw new Exception(); }
 
                 frmCON.OpenPort();
             }
-            catch(Exception)
+            catch (Exception)
             {
-                MessageBox.Show( "Impossibile aprire il file.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Impossibile aprire il file.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -628,5 +663,4 @@ frmConnection frmCON = new frmConnection();
             }
         }
     }
-    
 }
