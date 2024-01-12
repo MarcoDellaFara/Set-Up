@@ -44,3 +44,9 @@ C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\FileConfig\FileConfig\bin\Debug\Fi
 C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\FileConfig\FileConfig\obj\Debug\FileConfig.csproj.CoreCompileInputs.cache
 C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\FileConfig\FileConfig\obj\Debug\FileConfig_.dll
 C:\_PROGETTI\TAB_Mobile\TAB_Mobile_App\Set-Up\FileConfig\FileConfig\obj\Debug\FileConfig_.pdb
+C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\FileConfig\FileConfig\bin\Debug\FileConfig_.dll
+C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\FileConfig\FileConfig\bin\Debug\FileConfig_.pdb
+C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\FileConfig\FileConfig\obj\Debug\FileConfig.csprojAssemblyReference.cache
+C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\FileConfig\FileConfig\obj\Debug\FileConfig.csproj.CoreCompileInputs.cache
+C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\FileConfig\FileConfig\obj\Debug\FileConfig_.dll
+C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\FileConfig\FileConfig\obj\Debug\FileConfig_.pdb
