@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Diagnostics;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using connection;
 using System.IO;
@@ -208,13 +204,13 @@ frmConnection frmCON = new frmConnection();
                 tstlbl1.Text = "COM?";
                 tstlbl1.BackColor = Color.FromArgb(255,240,240,240);
 
-                MessageBox.Show("Collegamento Assente", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Collegamento al Dispositivo Assente", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return res;
         }
 
         int RxCount = 0;
-        byte[] buf = new byte[16];
+        byte[] buf = new byte[18];
         string[] chr = { " ","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
 
         private void btnRead_Click(object sender, EventArgs e)
@@ -222,11 +218,11 @@ frmConnection frmCON = new frmConnection();
             if (!Resfresh_StatusCom()) { return; }
 
             frmCON.SerialPort.Write("SetUpR");
-            Thread.Sleep(1000);
+            Thread.Sleep(2000);
             RxCount = frmCON.SerialPort.BytesToRead;
             frmCON.SerialPort.Read(buf, 0, RxCount);
 
-            if (RxCount == 14)
+            if (RxCount == 16)
             {
 
                 if ((buf[0] & 1) == 1)
@@ -259,6 +255,7 @@ frmConnection frmCON = new frmConnection();
 
                 nudLimitTieBreak.Value = buf[10];
                 nudLimitTieBreakExtra.Value = buf[11];
+                nudAdvantegeLimit.Value = buf[12];
 
                 btnWrite.Enabled = true;
             }
@@ -309,11 +306,13 @@ frmConnection frmCON = new frmConnection();
             buf[10] = (byte)nudLimitTieBreak.Value;
             buf[11] = (byte)nudLimitTieBreakExtra.Value;
 
-            buf[12] = 0;
+            buf[12] = (byte)nudAdvantegeLimit.Value;
+
+            buf[13] = 0;
             buf[14] = 0;
 
             frmCON.SerialPort.Write("SetUpW");
-            frmCON.SerialPort.Write(buf, 0, 13);
+            frmCON.SerialPort.Write(buf, 0, 14);
         }
 
         private void TimeSet()
@@ -466,7 +465,9 @@ frmConnection frmCON = new frmConnection();
                     break;
             }
 
-            if ((buf[13] & 2) == 2)
+            //buf(13)
+
+            if ((buf[14] & 2) == 2)
             {
                 txtTurnoA.BackColor = Color.White;
                 txtTurnoB.BackColor = Color.Yellow;
@@ -477,7 +478,7 @@ frmConnection frmCON = new frmConnection();
                 txtTurnoA.BackColor = Color.Yellow;
             }
 
-            if ((buf[13] & 4) == 4)
+            if ((buf[15] & 4) == 4)
             {
                 chkCambioCampo.Checked = true;
             }
@@ -514,30 +515,85 @@ frmConnection frmCON = new frmConnection();
             else if (optSet3.Checked) { buf[12] = 3; }
             else if (optSet4.Checked) { buf[12] = 4; }
 
+            //buf[13];
+
             if (txtTurnoB.BackColor == Color.Yellow)
             {
-                buf[13] |= 0b00000010;
+                buf[14] |= 0b00000010;
             }
             else
             {
-                buf[13] &= 0b11111101;
+                buf[14] &= 0b11111101;
             }
 
             if (chkCambioCampo.Checked)
             {
-                buf[13] |= 0b00000100;
+                buf[15] |= 0b00000100;
             }
             else
             {
-                buf[13] &= 0b11111011;
+                buf[15] &= 0b11111011;
             }
 
             frmCON.SerialPort.Write("ScoreW");
-            frmCON.SerialPort.Write(buf, 0, 14);
+            frmCON.SerialPort.Write(buf, 0, 15);
 
         }
 
         private void setLogoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void deviceUpdateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // For the example
+            //string ex1 = Application.StartupPath;
+            //string ex2 = "\\Update";
+
+            // Use ProcessStartInfo class
+            //ProcessStartInfo startInfo = new ProcessStartInfo();
+
+            if (!Resfresh_StatusCom()) { return; }
+
+            try
+            {
+                frmCON.ClosePort();
+
+                Process process = new Process();
+
+                process.StartInfo.CreateNoWindow = true;
+                process.StartInfo.UseShellExecute = false;
+                process.StartInfo.RedirectStandardOutput = true;
+                process.StartInfo.FileName = Application.StartupPath + "\\esptool.exe";
+                process.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
+                process.StartInfo.Arguments = "-p COM3 -b 912600 write_flash 0x10000 firmware.bin";
+                process.Start();
+
+                StreamReader reader = process.StandardOutput;
+                string output = reader.ReadToEnd();
+
+                Console.WriteLine(output);
+
+                process.WaitForExit();
+
+                Boolean marco = output.Contains("Hash of data verified.");
+
+                if (!marco) { throw new Exception(); }
+
+                frmCON.OpenPort();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Impossibile aprire il file.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                MessageBox.Show("Aggionramento del dispositivo Eseguito con Successo", "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void setLogoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             string filepath = "";
             //byte[] pack = { 255, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
@@ -615,51 +671,15 @@ frmConnection frmCON = new frmConnection();
             }
         }
 
-        private void deviceUpdateToolStripMenuItem_Click(object sender, EventArgs e)
+        private void openEditorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // For the example
-            //string ex1 = Application.StartupPath;
-            //string ex2 = "\\Update";
+            frmEditor frm1 = new frmEditor();
+            //Thread.Sleep(5000);
+            frm1.Show();
 
-            // Use ProcessStartInfo class
-            //ProcessStartInfo startInfo = new ProcessStartInfo();
-
-            if (!Resfresh_StatusCom()) { return; }
-
-            try
+            while (frm1.Visible)
             {
-                frmCON.ClosePort();
-
-                Process process = new Process();
-
-                process.StartInfo.CreateNoWindow = true;
-                process.StartInfo.UseShellExecute = false;
-                process.StartInfo.RedirectStandardOutput = true;
-                process.StartInfo.FileName = Application.StartupPath + "\\esptool.exe";
-                process.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
-                process.StartInfo.Arguments = "-p COM3 -b 912600 write_flash 0x10000 firmware.bin";
-                process.Start();
-
-                StreamReader reader = process.StandardOutput;
-                string output = reader.ReadToEnd();
-
-                Console.WriteLine(output);
-
-                process.WaitForExit();
-
-                Boolean marco = output.Contains("Hash of data verified.");
-
-                if (!marco) { throw new Exception(); }
-
-                frmCON.OpenPort();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Impossibile aprire il file.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                MessageBox.Show("Aggionramento del dispositivo Eseguito con Successo", "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Application.DoEvents();
             }
         }
     }

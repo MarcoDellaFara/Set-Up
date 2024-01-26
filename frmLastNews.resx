@@ -118,15 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="richTextBox1.Text" xml:space="preserve">
-    <value>1.1.2
+    <value>1.2.0
+Gestione del limite massimo di Vantaggi ammessi in un gioco quando viene abilitato il Killer-Point
+(Limiti: Min = 0 - Max = 10 / Default = 0)
+
+1.1.2
 Possibilità di Caricare Loghi da file esterno.
 Gestione Manuale dell'aggiornamento del Firmware del Dispositivo.
 
 1.1.1
-Gestione della mancata connettività ad Internet.
-
-1.1.0
-Aggiunto la Verifica automatica degli aggiornamenti online all'avvio del programma.</value>
+Gestione della mancata connettività ad Internet.</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

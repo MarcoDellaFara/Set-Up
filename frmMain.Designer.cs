@@ -63,9 +63,12 @@ namespace SetUp
             this.txtGameB = new System.Windows.Forms.TextBox();
             this.txtGameA = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.chkKillerPoint = new System.Windows.Forms.CheckBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.nudAdvantegeLimit = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
             this.nudSetLimit = new System.Windows.Forms.NumericUpDown();
-            this.chkKillerPoint = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.nudN_Set = new System.Windows.Forms.NumericUpDown();
@@ -92,12 +95,16 @@ namespace SetUp
             this.communicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timeSetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setLogoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.setLogoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.openEditorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deviceUpdateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.grbScore.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAdvantegeLimit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSetLimit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudN_Set)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLimitTieBreak)).BeginInit();
@@ -462,19 +469,62 @@ namespace SetUp
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.groupBox8);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.nudSetLimit);
-            this.groupBox1.Controls.Add(this.chkKillerPoint);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.nudN_Set);
             this.groupBox1.Controls.Add(this.nudLimitTieBreak);
             this.groupBox1.Location = new System.Drawing.Point(6, 19);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(152, 141);
+            this.groupBox1.Size = new System.Drawing.Size(152, 183);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Regular Times";
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.chkKillerPoint);
+            this.groupBox8.Controls.Add(this.label12);
+            this.groupBox8.Controls.Add(this.nudAdvantegeLimit);
+            this.groupBox8.Location = new System.Drawing.Point(4, 103);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(141, 74);
+            this.groupBox8.TabIndex = 0;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Final";
+            // 
+            // chkKillerPoint
+            // 
+            this.chkKillerPoint.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkKillerPoint.Location = new System.Drawing.Point(5, 19);
+            this.chkKillerPoint.Name = "chkKillerPoint";
+            this.chkKillerPoint.Size = new System.Drawing.Size(129, 24);
+            this.chkKillerPoint.TabIndex = 57;
+            this.chkKillerPoint.Text = "Enable Killer-Point";
+            this.chkKillerPoint.UseVisualStyleBackColor = true;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(2, 50);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(91, 13);
+            this.label12.TabIndex = 56;
+            this.label12.Text = " Advantages Limit";
+            // 
+            // nudAdvantegeLimit
+            // 
+            this.nudAdvantegeLimit.Location = new System.Drawing.Point(103, 48);
+            this.nudAdvantegeLimit.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.nudAdvantegeLimit.Name = "nudAdvantegeLimit";
+            this.nudAdvantegeLimit.Size = new System.Drawing.Size(32, 20);
+            this.nudAdvantegeLimit.TabIndex = 55;
             // 
             // label9
             // 
@@ -506,16 +556,6 @@ namespace SetUp
             0,
             0,
             0});
-            // 
-            // chkKillerPoint
-            // 
-            this.chkKillerPoint.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.chkKillerPoint.Location = new System.Drawing.Point(10, 109);
-            this.chkKillerPoint.Name = "chkKillerPoint";
-            this.chkKillerPoint.Size = new System.Drawing.Size(126, 23);
-            this.chkKillerPoint.TabIndex = 20;
-            this.chkKillerPoint.Text = "Killer Point";
-            this.chkKillerPoint.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -585,9 +625,9 @@ namespace SetUp
             this.groupBox2.Controls.Add(this.chkExtraTieBreak);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.nudLimitTieBreakExtra);
-            this.groupBox2.Location = new System.Drawing.Point(6, 166);
+            this.groupBox2.Location = new System.Drawing.Point(6, 210);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(152, 103);
+            this.groupBox2.Size = new System.Drawing.Size(152, 81);
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Final Times";
@@ -595,7 +635,7 @@ namespace SetUp
             // chkExtraTieBreak
             // 
             this.chkExtraTieBreak.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.chkExtraTieBreak.Location = new System.Drawing.Point(10, 19);
+            this.chkExtraTieBreak.Location = new System.Drawing.Point(10, 27);
             this.chkExtraTieBreak.Name = "chkExtraTieBreak";
             this.chkExtraTieBreak.Size = new System.Drawing.Size(135, 17);
             this.chkExtraTieBreak.TabIndex = 20;
@@ -605,7 +645,7 @@ namespace SetUp
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(7, 79);
+            this.label5.Location = new System.Drawing.Point(7, 58);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 13);
             this.label5.TabIndex = 19;
@@ -613,7 +653,7 @@ namespace SetUp
             // 
             // nudLimitTieBreakExtra
             // 
-            this.nudLimitTieBreakExtra.Location = new System.Drawing.Point(104, 77);
+            this.nudLimitTieBreakExtra.Location = new System.Drawing.Point(104, 56);
             this.nudLimitTieBreakExtra.Maximum = new decimal(new int[] {
             10,
             0,
@@ -696,7 +736,7 @@ namespace SetUp
             this.groupBox5.Controls.Add(this.txtNameA);
             this.groupBox5.Location = new System.Drawing.Point(164, 19);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(142, 250);
+            this.groupBox5.Size = new System.Drawing.Size(142, 272);
             this.groupBox5.TabIndex = 21;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Setting Name";
@@ -704,7 +744,7 @@ namespace SetUp
             // chkNameEnable
             // 
             this.chkNameEnable.AutoSize = true;
-            this.chkNameEnable.Location = new System.Drawing.Point(10, 26);
+            this.chkNameEnable.Location = new System.Drawing.Point(6, 32);
             this.chkNameEnable.Name = "chkNameEnable";
             this.chkNameEnable.Size = new System.Drawing.Size(90, 17);
             this.chkNameEnable.TabIndex = 16;
@@ -714,7 +754,7 @@ namespace SetUp
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 150);
+            this.label2.Location = new System.Drawing.Point(28, 175);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 13);
             this.label2.TabIndex = 15;
@@ -723,7 +763,7 @@ namespace SetUp
             // txtNameB
             // 
             this.txtNameB.Font = new System.Drawing.Font("Arial Black", 25.25F, System.Drawing.FontStyle.Bold);
-            this.txtNameB.Location = new System.Drawing.Point(26, 166);
+            this.txtNameB.Location = new System.Drawing.Point(28, 191);
             this.txtNameB.Name = "txtNameB";
             this.txtNameB.Size = new System.Drawing.Size(89, 55);
             this.txtNameB.TabIndex = 14;
@@ -734,7 +774,7 @@ namespace SetUp
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 61);
+            this.label1.Location = new System.Drawing.Point(28, 75);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 13);
             this.label1.TabIndex = 13;
@@ -743,7 +783,7 @@ namespace SetUp
             // txtNameA
             // 
             this.txtNameA.Font = new System.Drawing.Font("Arial Black", 25.25F, System.Drawing.FontStyle.Bold);
-            this.txtNameA.Location = new System.Drawing.Point(26, 77);
+            this.txtNameA.Location = new System.Drawing.Point(28, 91);
             this.txtNameA.Name = "txtNameA";
             this.txtNameA.Size = new System.Drawing.Size(89, 55);
             this.txtNameA.TabIndex = 12;
@@ -819,11 +859,28 @@ namespace SetUp
             // 
             // setLogoToolStripMenuItem
             // 
+            this.setLogoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.setLogoToolStripMenuItem1,
+            this.openEditorToolStripMenuItem});
             this.setLogoToolStripMenuItem.Image = global::SetUp.Properties.Resources.diamond_computer_pc_sketch_jewelry_icon_193950;
             this.setLogoToolStripMenuItem.Name = "setLogoToolStripMenuItem";
             this.setLogoToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
             this.setLogoToolStripMenuItem.Text = "Set Logo";
             this.setLogoToolStripMenuItem.Click += new System.EventHandler(this.setLogoToolStripMenuItem_Click);
+            // 
+            // setLogoToolStripMenuItem1
+            // 
+            this.setLogoToolStripMenuItem1.Name = "setLogoToolStripMenuItem1";
+            this.setLogoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.setLogoToolStripMenuItem1.Text = "Set Logo";
+            this.setLogoToolStripMenuItem1.Click += new System.EventHandler(this.setLogoToolStripMenuItem1_Click);
+            // 
+            // openEditorToolStripMenuItem
+            // 
+            this.openEditorToolStripMenuItem.Name = "openEditorToolStripMenuItem";
+            this.openEditorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openEditorToolStripMenuItem.Text = "Open Editor";
+            this.openEditorToolStripMenuItem.Click += new System.EventHandler(this.openEditorToolStripMenuItem_Click);
             // 
             // deviceUpdateToolStripMenuItem
             // 
@@ -858,6 +915,9 @@ namespace SetUp
             this.groupBox6.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAdvantegeLimit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSetLimit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudN_Set)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLimitTieBreak)).EndInit();
@@ -912,7 +972,6 @@ namespace SetUp
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.NumericUpDown nudSetLimit;
-        private System.Windows.Forms.CheckBox chkKillerPoint;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown nudN_Set;
@@ -943,6 +1002,12 @@ namespace SetUp
         private System.Windows.Forms.CheckBox chkCambioCampo;
         private System.Windows.Forms.ToolStripMenuItem setLogoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deviceUpdateToolStripMenuItem;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.CheckBox chkKillerPoint;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.NumericUpDown nudAdvantegeLimit;
+        private System.Windows.Forms.ToolStripMenuItem setLogoToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem openEditorToolStripMenuItem;
     }
 }
 

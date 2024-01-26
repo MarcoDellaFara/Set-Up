@@ -21,15 +21,5 @@ namespace SetUp
         {
             this.Close();
         }
-
-        private void frmLastNews_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
