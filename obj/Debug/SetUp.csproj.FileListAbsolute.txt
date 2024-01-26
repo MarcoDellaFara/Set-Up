@@ -60,7 +60,10 @@ C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\bin\Debug\FileConfig_.dll
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\bin\Debug\Connection.pdb
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\bin\Debug\FileConfig_.pdb
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\obj\Debug\SetUp.csprojAssemblyReference.cache
+<<<<<<< HEAD
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\obj\Debug\SetUp.frmEditor.resources
+=======
+>>>>>>> 84ad122287a430d8f0132c93356276c28a4c5198
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\obj\Debug\SetUp.frmLastNews.resources
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\obj\Debug\SetUp.frmMain.resources
 C:\_PROGETTI\TAB_Mobile\TAB-Mobile_App\Set-Up\obj\Debug\SetUp.Properties.Resources.resources
